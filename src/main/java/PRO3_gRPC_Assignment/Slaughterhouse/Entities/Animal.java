@@ -1,4 +1,4 @@
-package PRO3_gRPC_Assignment.Slaugherhouse.Entities;
+package PRO3_gRPC_Assignment.Slaughterhouse.Entities;
 
 public class Animal {
   private String registrationId;

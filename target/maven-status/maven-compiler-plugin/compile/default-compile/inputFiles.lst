@@ -1,21 +1,29 @@
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\src\main\java\PRO3_gRPC_Assignment\Pro3GRpcAssignmentApplication.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\Client.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Entities\Animal.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Entities\Product.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\gRPC\SlaughterhouseService.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\grpc-java\dk\via\slaughterhouse\SlaughterhouseServiceGrpc.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\Animal.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalId.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalIdOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalListResponse.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalListResponseOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\EmptyMessage.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\EmptyMessageOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\Product.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductId.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductIdOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductListResponse.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductListResponseOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductOrBuilder.java
-C:\Users\Marcus Lykkegaard\Desktop\Softwareteknologi\Softwareprogrammer\IdeaProjects\PRO3_gRPC_Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\Slaughterhouse.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Pro3GRpcAssignmentApplication.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\Client.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Entities\Animal.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Entities\Product.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\gRPC\SlaughterhouseService.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\grpc-java\dk\via\slaughterhouse\SlaughterhouseServiceGrpc.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalDataOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalId.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalIdOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalPartData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalPartDataOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalPartId.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalPartIdOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalPartsData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalPartsDataOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalsData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\AnimalsDataOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\EmptyMessage.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\EmptyMessageOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductDataOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductId.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductIdOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductsData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\ProductsDataOrBuilder.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\Slaughterhouse.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\TrayData.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\target\generated-sources\protobuf\java\dk\via\slaughterhouse\TrayDataOrBuilder.java

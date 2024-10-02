@@ -1,6 +1,6 @@
-package PRO3_gRPC_Assignment.Slaughterhouse.Server.gRPC.DataConverters;
+package PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters;
 
-import PRO3_gRPC_Assignment.Slaughterhouse.Entities.Animal;
+import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.Animal;
 import dk.via.slaughterhouse.AnimalData;
 import dk.via.slaughterhouse.AnimalId;
 import dk.via.slaughterhouse.AnimalsData;

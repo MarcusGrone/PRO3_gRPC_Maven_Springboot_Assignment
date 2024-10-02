@@ -40,6 +40,16 @@ public final class Slaughterhouse {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_dk_via_slaughterhouse_AnimalPartData_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_dk_via_slaughterhouse_PartTypeId_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_dk_via_slaughterhouse_PartTypeId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_dk_via_slaughterhouse_PartTypeData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_dk_via_slaughterhouse_PartTypeData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_dk_via_slaughterhouse_AnimalPartId_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -83,55 +93,60 @@ public final class Slaughterhouse {
       "\001(\t\022\016\n\006weight\030\002 \001(\001\"\"\n\010AnimalId\022\026\n\016regis" +
       "trationId\030\001 \001(\t\"A\n\013AnimalsData\0222\n\007animal" +
       "s\030\001 \003(\0132!.dk.via.slaughterhouse.AnimalDa" +
-      "ta\"\016\n\014EmptyMessage\"L\n\016AnimalPartData\022\024\n\014" +
-      "animalPartId\030\001 \001(\t\022\022\n\npartWeight\030\002 \001(\t\022\020" +
-      "\n\010animalId\030\003 \001(\t\"$\n\014AnimalPartId\022\024\n\014anim" +
-      "alPartId\030\001 \001(\t\"M\n\017AnimalPartsData\022:\n\013ani" +
-      "malParts\030\001 \003(\0132%.dk.via.slaughterhouse.A",
-      "nimalPartData\"T\n\010TrayData\022\016\n\006trayId\030\001 \001(" +
-      "\t\0228\n\013animalParts\030\002 \003(\0132#.dk.via.slaughte" +
-      "rhouse.AnimalPartId\"\216\001\n\013ProductData\022\021\n\tp" +
-      "roductId\030\001 \001(\t\0220\n\007trayIds\030\002 \003(\0132\037.dk.via" +
-      ".slaughterhouse.TrayData\022:\n\ranimalPartId" +
-      "s\030\003 \003(\0132#.dk.via.slaughterhouse.AnimalPa" +
-      "rtId\"\036\n\tProductId\022\021\n\tproductId\030\001 \001(\t\"D\n\014" +
-      "ProductsData\0224\n\010products\030\001 \003(\0132\".dk.via." +
-      "slaughterhouse.ProductData2\354\n\n\025Slaughter" +
-      "houseService\022V\n\016registerAnimal\022!.dk.via.",
-      "slaughterhouse.AnimalData\032!.dk.via.slaug" +
-      "hterhouse.AnimalData\022b\n\022registerAnimalPa" +
-      "rt\022%.dk.via.slaughterhouse.AnimalPartDat" +
-      "a\032%.dk.via.slaughterhouse.AnimalPartData" +
-      "\022Y\n\017registerProduct\022\".dk.via.slaughterho" +
-      "use.ProductData\032\".dk.via.slaughterhouse." +
-      "ProductData\022P\n\nreadAnimal\022\037.dk.via.slaug" +
-      "hterhouse.AnimalId\032!.dk.via.slaughterhou" +
-      "se.AnimalData\022\\\n\016readAnimalPart\022#.dk.via" +
-      ".slaughterhouse.AnimalPartId\032%.dk.via.sl",
-      "aughterhouse.AnimalPartData\022S\n\013readProdu" +
-      "ct\022 .dk.via.slaughterhouse.ProductId\032\".d" +
-      "k.via.slaughterhouse.ProductData\022V\n\014upda" +
-      "teAnimal\022!.dk.via.slaughterhouse.AnimalD" +
-      "ata\032#.dk.via.slaughterhouse.EmptyMessage" +
-      "\022^\n\020updateAnimalPart\022%.dk.via.slaughterh" +
-      "ouse.AnimalPartData\032#.dk.via.slaughterho" +
-      "use.EmptyMessage\022X\n\rupdateProduct\022\".dk.v" +
-      "ia.slaughterhouse.ProductData\032#.dk.via.s" +
-      "laughterhouse.EmptyMessage\022V\n\014removeAnim",
-      "al\022!.dk.via.slaughterhouse.AnimalData\032#." +
-      "dk.via.slaughterhouse.EmptyMessage\022^\n\020re" +
-      "moveAnimalPart\022%.dk.via.slaughterhouse.A" +
-      "nimalPartData\032#.dk.via.slaughterhouse.Em" +
-      "ptyMessage\022X\n\rremoveProduct\022\".dk.via.sla" +
-      "ughterhouse.ProductData\032#.dk.via.slaught" +
-      "erhouse.EmptyMessage\022X\n\rgetAllAnimals\022#." +
-      "dk.via.slaughterhouse.EmptyMessage\032\".dk." +
-      "via.slaughterhouse.AnimalsData\022]\n\016getAni" +
-      "malParts\022#.dk.via.slaughterhouse.EmptyMe",
-      "ssage\032&.dk.via.slaughterhouse.AnimalPart" +
-      "sData\022Z\n\016getAllProducts\022#.dk.via.slaught" +
-      "erhouse.EmptyMessage\032#.dk.via.slaughterh" +
-      "ouse.ProductsDataB\002P\001b\006proto3"
+      "ta\"\016\n\014EmptyMessage\"`\n\016AnimalPartData\022\024\n\014" +
+      "animalPartId\030\001 \001(\t\022\022\n\npartTypeId\030\002 \001(\t\022\022" +
+      "\n\npartWeight\030\003 \001(\t\022\020\n\010animalId\030\004 \001(\t\" \n\n" +
+      "PartTypeId\022\022\n\npartTypeId\030\001 \001(\t\"4\n\014PartTy" +
+      "peData\022\022\n\npartTypeId\030\001 \001(\t\022\020\n\010partDesc\030\002",
+      " \001(\t\"$\n\014AnimalPartId\022\024\n\014animalPartId\030\001 \001" +
+      "(\t\"M\n\017AnimalPartsData\022:\n\013animalParts\030\001 \003" +
+      "(\0132%.dk.via.slaughterhouse.AnimalPartDat" +
+      "a\"T\n\010TrayData\022\016\n\006trayId\030\001 \001(\t\0228\n\013animalP" +
+      "arts\030\002 \003(\0132#.dk.via.slaughterhouse.Anima" +
+      "lPartId\"\216\001\n\013ProductData\022\021\n\tproductId\030\001 \001" +
+      "(\t\0220\n\007trayIds\030\002 \003(\0132\037.dk.via.slaughterho" +
+      "use.TrayData\022:\n\ranimalPartIds\030\003 \003(\0132#.dk" +
+      ".via.slaughterhouse.AnimalPartId\"\036\n\tProd" +
+      "uctId\022\021\n\tproductId\030\001 \001(\t\"D\n\014ProductsData",
+      "\0224\n\010products\030\001 \003(\0132\".dk.via.slaughterhou" +
+      "se.ProductData2\304\013\n\025SlaughterhouseService" +
+      "\022V\n\016registerAnimal\022!.dk.via.slaughterhou" +
+      "se.AnimalData\032!.dk.via.slaughterhouse.An" +
+      "imalData\022b\n\022registerAnimalPart\022%.dk.via." +
+      "slaughterhouse.AnimalPartData\032%.dk.via.s" +
+      "laughterhouse.AnimalPartData\022Y\n\017register" +
+      "Product\022\".dk.via.slaughterhouse.ProductD" +
+      "ata\032\".dk.via.slaughterhouse.ProductData\022" +
+      "P\n\nreadAnimal\022\037.dk.via.slaughterhouse.An",
+      "imalId\032!.dk.via.slaughterhouse.AnimalDat" +
+      "a\022\\\n\016readAnimalPart\022#.dk.via.slaughterho" +
+      "use.AnimalPartId\032%.dk.via.slaughterhouse" +
+      ".AnimalPartData\022S\n\013readProduct\022 .dk.via." +
+      "slaughterhouse.ProductId\032\".dk.via.slaugh" +
+      "terhouse.ProductData\022V\n\014readPartType\022!.d" +
+      "k.via.slaughterhouse.PartTypeId\032#.dk.via" +
+      ".slaughterhouse.PartTypeData\022V\n\014updateAn" +
+      "imal\022!.dk.via.slaughterhouse.AnimalData\032" +
+      "#.dk.via.slaughterhouse.EmptyMessage\022^\n\020",
+      "updateAnimalPart\022%.dk.via.slaughterhouse" +
+      ".AnimalPartData\032#.dk.via.slaughterhouse." +
+      "EmptyMessage\022X\n\rupdateProduct\022\".dk.via.s" +
+      "laughterhouse.ProductData\032#.dk.via.slaug" +
+      "hterhouse.EmptyMessage\022V\n\014removeAnimal\022!" +
+      ".dk.via.slaughterhouse.AnimalData\032#.dk.v" +
+      "ia.slaughterhouse.EmptyMessage\022^\n\020remove" +
+      "AnimalPart\022%.dk.via.slaughterhouse.Anima" +
+      "lPartData\032#.dk.via.slaughterhouse.EmptyM" +
+      "essage\022X\n\rremoveProduct\022\".dk.via.slaught",
+      "erhouse.ProductData\032#.dk.via.slaughterho" +
+      "use.EmptyMessage\022X\n\rgetAllAnimals\022#.dk.v" +
+      "ia.slaughterhouse.EmptyMessage\032\".dk.via." +
+      "slaughterhouse.AnimalsData\022]\n\016getAnimalP" +
+      "arts\022#.dk.via.slaughterhouse.EmptyMessag" +
+      "e\032&.dk.via.slaughterhouse.AnimalPartsDat" +
+      "a\022Z\n\016getAllProducts\022#.dk.via.slaughterho" +
+      "use.EmptyMessage\032#.dk.via.slaughterhouse" +
+      ".ProductsDataB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -174,39 +189,51 @@ public final class Slaughterhouse {
     internal_static_dk_via_slaughterhouse_AnimalPartData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_AnimalPartData_descriptor,
-        new java.lang.String[] { "AnimalPartId", "PartWeight", "AnimalId", });
-    internal_static_dk_via_slaughterhouse_AnimalPartId_descriptor =
+        new java.lang.String[] { "AnimalPartId", "PartTypeId", "PartWeight", "AnimalId", });
+    internal_static_dk_via_slaughterhouse_PartTypeId_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_dk_via_slaughterhouse_PartTypeId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_dk_via_slaughterhouse_PartTypeId_descriptor,
+        new java.lang.String[] { "PartTypeId", });
+    internal_static_dk_via_slaughterhouse_PartTypeData_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_dk_via_slaughterhouse_PartTypeData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_dk_via_slaughterhouse_PartTypeData_descriptor,
+        new java.lang.String[] { "PartTypeId", "PartDesc", });
+    internal_static_dk_via_slaughterhouse_AnimalPartId_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_dk_via_slaughterhouse_AnimalPartId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_AnimalPartId_descriptor,
         new java.lang.String[] { "AnimalPartId", });
     internal_static_dk_via_slaughterhouse_AnimalPartsData_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_dk_via_slaughterhouse_AnimalPartsData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_AnimalPartsData_descriptor,
         new java.lang.String[] { "AnimalParts", });
     internal_static_dk_via_slaughterhouse_TrayData_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_dk_via_slaughterhouse_TrayData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_TrayData_descriptor,
         new java.lang.String[] { "TrayId", "AnimalParts", });
     internal_static_dk_via_slaughterhouse_ProductData_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_dk_via_slaughterhouse_ProductData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_ProductData_descriptor,
         new java.lang.String[] { "ProductId", "TrayIds", "AnimalPartIds", });
     internal_static_dk_via_slaughterhouse_ProductId_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_dk_via_slaughterhouse_ProductId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_ProductId_descriptor,
         new java.lang.String[] { "ProductId", });
     internal_static_dk_via_slaughterhouse_ProductsData_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_dk_via_slaughterhouse_ProductsData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_ProductsData_descriptor,

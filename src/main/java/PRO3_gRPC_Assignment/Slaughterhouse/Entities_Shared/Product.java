@@ -1,4 +1,4 @@
-package PRO3_gRPC_Assignment.Slaughterhouse.Entities;
+package PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared;
 
 import java.util.List;
 

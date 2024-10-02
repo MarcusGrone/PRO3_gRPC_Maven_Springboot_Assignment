@@ -1,4 +1,4 @@
-package PRO3_gRPC_Assignment.Slaughterhouse.Entities;
+package PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared;
 
 public class PartType {
   private final String typeId;        // Unique identifier for the part type

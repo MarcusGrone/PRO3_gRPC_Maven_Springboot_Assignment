@@ -1,8 +1,8 @@
 package PRO3_gRPC_Assignment.Slaughterhouse.Client.service;
 
 import PRO3_gRPC_Assignment.Slaughterhouse.Client.interfaces.IAnimalRegistration;
-import PRO3_gRPC_Assignment.Slaughterhouse.Entities.Animal;
-import PRO3_gRPC_Assignment.Slaughterhouse.Server.gRPC.DataConverters.AnimalConverter;
+import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.Animal;
+import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.AnimalConverter;
 import dk.via.slaughterhouse.AnimalData;
 import dk.via.slaughterhouse.SlaughterhouseServiceGrpc;
 import io.grpc.ManagedChannel;

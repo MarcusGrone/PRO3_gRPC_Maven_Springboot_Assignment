@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Added Server and Dao Packages">
+    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Updated Protocol and added structure and started implementing client services.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/gRPC/SlaughterhouseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/interfaces/IAnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/interfaces/IAnimalRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/AnimalPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/AnimalPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/PartType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/PartType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Tray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Tray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/AnimalPart/AnimalPartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/AnimalPart/AnimalPartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Tray/TrayDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Tray/TrayDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/DataConverters/AnimalConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/dataConverters/AnimalConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/deleteme.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/slaughterhouse.proto" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +64,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Maven.PRO3_gRPC_Assignment [compile].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.GRPCServer.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -74,7 +91,20 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.GRPCServer">
+    <configuration name="GRPCServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="PRO3_gRPC_Assignment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="PRO3_gRPC_Assignment.Slaughterhouse.Server.GRPCServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PRO3_gRPC_Assignment.Slaughterhouse.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Pro3GRpcAssignmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="PRO3_gRPC_Assignment" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="PRO3_gRPC_Assignment.Pro3GRpcAssignmentApplication" />
@@ -82,6 +112,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.GRPCServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -142,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727894239495</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated Protocol and added structure and started implementing client services.">
+      <option name="closed" value="true" />
+      <created>1727899443757</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727899443757</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +196,7 @@
     <MESSAGE value="Small Changes, lots to do." />
     <MESSAGE value="Updated Protocol" />
     <MESSAGE value="Added Server and Dao Packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Server and Dao Packages" />
+    <MESSAGE value="Updated Protocol and added structure and started implementing client services." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Protocol and added structure and started implementing client services." />
   </component>
 </project>

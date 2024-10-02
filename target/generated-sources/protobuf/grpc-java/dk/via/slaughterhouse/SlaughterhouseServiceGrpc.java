@@ -100,6 +100,18 @@ public final class SlaughterhouseServiceGrpc {
               dk.via.slaughterhouse.ProductData.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<dk.via.slaughterhouse.PartTypeId,
+      dk.via.slaughterhouse.PartTypeData> METHOD_READ_PART_TYPE =
+      io.grpc.MethodDescriptor.<dk.via.slaughterhouse.PartTypeId, dk.via.slaughterhouse.PartTypeData>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "dk.via.slaughterhouse.SlaughterhouseService", "readPartType"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.slaughterhouse.PartTypeId.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.slaughterhouse.PartTypeData.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<dk.via.slaughterhouse.AnimalData,
       dk.via.slaughterhouse.EmptyMessage> METHOD_UPDATE_ANIMAL =
       io.grpc.MethodDescriptor.<dk.via.slaughterhouse.AnimalData, dk.via.slaughterhouse.EmptyMessage>newBuilder()
@@ -284,6 +296,13 @@ public final class SlaughterhouseServiceGrpc {
     }
 
     /**
+     */
+    public void readPartType(dk.via.slaughterhouse.PartTypeId request,
+        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.PartTypeData> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_READ_PART_TYPE, responseObserver);
+    }
+
+    /**
      * <pre>
      * Update:
      * </pre>
@@ -399,6 +418,13 @@ public final class SlaughterhouseServiceGrpc {
                 dk.via.slaughterhouse.ProductId,
                 dk.via.slaughterhouse.ProductData>(
                   this, METHODID_READ_PRODUCT)))
+          .addMethod(
+            METHOD_READ_PART_TYPE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                dk.via.slaughterhouse.PartTypeId,
+                dk.via.slaughterhouse.PartTypeData>(
+                  this, METHODID_READ_PART_TYPE)))
           .addMethod(
             METHOD_UPDATE_ANIMAL,
             asyncUnaryCall(
@@ -536,6 +562,14 @@ public final class SlaughterhouseServiceGrpc {
         io.grpc.stub.StreamObserver<dk.via.slaughterhouse.ProductData> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_READ_PRODUCT, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void readPartType(dk.via.slaughterhouse.PartTypeId request,
+        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.PartTypeData> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_READ_PART_TYPE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -687,6 +721,13 @@ public final class SlaughterhouseServiceGrpc {
     }
 
     /**
+     */
+    public dk.via.slaughterhouse.PartTypeData readPartType(dk.via.slaughterhouse.PartTypeId request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_READ_PART_TYPE, getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Update:
      * </pre>
@@ -832,6 +873,14 @@ public final class SlaughterhouseServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<dk.via.slaughterhouse.PartTypeData> readPartType(
+        dk.via.slaughterhouse.PartTypeId request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_READ_PART_TYPE, getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Update:
      * </pre>
@@ -919,15 +968,16 @@ public final class SlaughterhouseServiceGrpc {
   private static final int METHODID_READ_ANIMAL = 3;
   private static final int METHODID_READ_ANIMAL_PART = 4;
   private static final int METHODID_READ_PRODUCT = 5;
-  private static final int METHODID_UPDATE_ANIMAL = 6;
-  private static final int METHODID_UPDATE_ANIMAL_PART = 7;
-  private static final int METHODID_UPDATE_PRODUCT = 8;
-  private static final int METHODID_REMOVE_ANIMAL = 9;
-  private static final int METHODID_REMOVE_ANIMAL_PART = 10;
-  private static final int METHODID_REMOVE_PRODUCT = 11;
-  private static final int METHODID_GET_ALL_ANIMALS = 12;
-  private static final int METHODID_GET_ANIMAL_PARTS = 13;
-  private static final int METHODID_GET_ALL_PRODUCTS = 14;
+  private static final int METHODID_READ_PART_TYPE = 6;
+  private static final int METHODID_UPDATE_ANIMAL = 7;
+  private static final int METHODID_UPDATE_ANIMAL_PART = 8;
+  private static final int METHODID_UPDATE_PRODUCT = 9;
+  private static final int METHODID_REMOVE_ANIMAL = 10;
+  private static final int METHODID_REMOVE_ANIMAL_PART = 11;
+  private static final int METHODID_REMOVE_PRODUCT = 12;
+  private static final int METHODID_GET_ALL_ANIMALS = 13;
+  private static final int METHODID_GET_ANIMAL_PARTS = 14;
+  private static final int METHODID_GET_ALL_PRODUCTS = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -969,6 +1019,10 @@ public final class SlaughterhouseServiceGrpc {
         case METHODID_READ_PRODUCT:
           serviceImpl.readProduct((dk.via.slaughterhouse.ProductId) request,
               (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.ProductData>) responseObserver);
+          break;
+        case METHODID_READ_PART_TYPE:
+          serviceImpl.readPartType((dk.via.slaughterhouse.PartTypeId) request,
+              (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.PartTypeData>) responseObserver);
           break;
         case METHODID_UPDATE_ANIMAL:
           serviceImpl.updateAnimal((dk.via.slaughterhouse.AnimalData) request,
@@ -1045,6 +1099,7 @@ public final class SlaughterhouseServiceGrpc {
               .addMethod(METHOD_READ_ANIMAL)
               .addMethod(METHOD_READ_ANIMAL_PART)
               .addMethod(METHOD_READ_PRODUCT)
+              .addMethod(METHOD_READ_PART_TYPE)
               .addMethod(METHOD_UPDATE_ANIMAL)
               .addMethod(METHOD_UPDATE_ANIMAL_PART)
               .addMethod(METHOD_UPDATE_PRODUCT)

@@ -20,8 +20,18 @@ message EmptyMessage {}
 
 message AnimalPartData {
   string animalPartId = 1;
-  string partWeight = 2;
-  string animalId = 3;
+  string partTypeId = 2;
+  string partWeight = 3;
+  string animalId = 4;
+}
+
+message PartTypeId {
+  string partTypeId = 1;
+}
+
+message PartTypeData {
+  string partTypeId = 1;
+  string partDesc = 2;
 }
 
 message AnimalPartId {
@@ -61,6 +71,7 @@ service SlaughterhouseService {
   rpc readAnimal(AnimalId) returns (AnimalData);
   rpc readAnimalPart(AnimalPartId) returns (AnimalPartData);
   rpc readProduct(ProductId) returns (ProductData);
+  rpc readPartType(PartTypeId) returns (PartTypeData);
 
   // Update:
   rpc updateAnimal(AnimalData) returns (EmptyMessage);

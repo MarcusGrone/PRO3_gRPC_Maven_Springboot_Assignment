@@ -1,4 +1,4 @@
-package PRO3_gRPC_Assignment.Slaughterhouse.Client;
+package PRO3_gRPC_Assignment.Slaughterhouse.Client.service;
 
 
 import io.grpc.ManagedChannel;
@@ -16,7 +16,7 @@ public class Client {
     this.port = port;
   }
 
-  private ManagedChannel channel() {
+  protected ManagedChannel channel() {
     return ManagedChannelBuilder
         .forAddress(host, port)
         .usePlaintext()

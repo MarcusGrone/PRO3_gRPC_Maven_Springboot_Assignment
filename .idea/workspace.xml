@@ -4,105 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalId.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalIdOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalIdOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalListResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalListResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalListResponseOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/AnimalOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/EmptyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/EmptyMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/EmptyMessageOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/EmptyMessageOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductId.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductIdOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductIdOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductListResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductListResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductListResponseOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/annotations.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/auth.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/backend.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/billing.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/client.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/config_change.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/consumer.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/context.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/control.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/distribution.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/documentation.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/endpoint.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/error_reason.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/field_behavior.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/field_info.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/http.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/httpbody.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/label.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/launch_stage.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/log.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/logging.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/metric.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/monitored_resource.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/monitoring.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/policy.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/quota.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/resource.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/routing.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/service.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/source_info.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/system_parameter.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/usage.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/api/visibility.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/cloud/audit/audit_log.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/cloud/extended_operations.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/cloud/location/locations.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/geo/type/viewport.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/logging/type/http_request.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/logging/type/log_severity.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/longrunning/operations.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/rpc/code.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/rpc/context/attribute_context.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/rpc/context/audit_context.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/rpc/error_details.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/rpc/status.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/calendar_period.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/color.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/date.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/datetime.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/dayofweek.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/decimal.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/expr.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/fraction.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/interval.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/latlng.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/localized_text.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/money.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/month.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/phone_number.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/postal_address.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/quaternion.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5148a5fba82b6b4a047ac3c899a32444/google/type/timeofday.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/any.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/api.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/descriptor.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/duration.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/empty.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/field_mask.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/source_context.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/struct.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/timestamp.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/type.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/5323dbacf7266289fb6f653a19672f16/google/protobuf/wrappers.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/6aa0b14413407dc36b0dc40f200de919/grpc/binlog/v1/binarylog.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/6aa0b14413407dc36b0dc40f200de919/grpc/channelz/v1/channelz.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/6aa0b14413407dc36b0dc40f200de919/grpc/health/v1/health.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/6aa0b14413407dc36b0dc40f200de919/grpc/reflection/v1alpha/reflection.proto" beforeDir="false" />
+    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Updated Protocol">
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/DaoImplementations/Deleteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/DaoImplementations/Deleteme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/DaoInterfaces/Deleteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/DaoInterfaces/Deleteme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Deleteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Deleteme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/deleteme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/deleteme.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727810312823</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated Protocol">
+      <option name="closed" value="true" />
+      <created>1727893917875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727893917875</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First inital push." />
     <MESSAGE value="Small Changes, lots to do." />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Changes, lots to do." />
+    <MESSAGE value="Updated Protocol" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Protocol" />
   </component>
 </project>

@@ -9,7 +9,6 @@ public class Animal {
     this.weight = weight;
   }
 
-  // Getters and setters
   public String getRegistrationId() {
     return registrationId;
   }

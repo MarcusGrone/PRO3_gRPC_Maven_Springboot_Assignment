@@ -20,16 +20,6 @@ public final class Slaughterhouse {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_dk_via_slaughterhouse_Animal_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_dk_via_slaughterhouse_Part_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_dk_via_slaughterhouse_Part_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_dk_via_slaughterhouse_Tray_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_dk_via_slaughterhouse_Tray_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_dk_via_slaughterhouse_Product_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -70,30 +60,22 @@ public final class Slaughterhouse {
     java.lang.String[] descriptorData = {
       "\n\024slaughterhouse.proto\022\025dk.via.slaughter" +
       "house\"0\n\006Animal\022\026\n\016registrationId\030\001 \001(\t\022" +
-      "\016\n\006weight\030\002 \001(\001\"J\n\004Part\022\016\n\006partId\030\001 \001(\t\022" +
-      "\020\n\010animalId\030\002 \001(\t\022\016\n\006weight\030\003 \001(\001\022\020\n\010par" +
-      "tType\030\004 \001(\t\"g\n\004Tray\022\016\n\006trayId\030\001 \001(\t\022\020\n\010p" +
-      "artType\030\002 \001(\t\022*\n\005parts\030\003 \003(\0132\033.dk.via.sl" +
-      "aughterhouse.Part\022\021\n\tmaxWeight\030\004 \001(\001\"t\n\007" +
-      "Product\022\021\n\tproductId\030\001 \001(\t\022*\n\005parts\030\002 \003(" +
-      "\0132\033.dk.via.slaughterhouse.Part\022*\n\005trays\030" +
-      "\003 \003(\0132\033.dk.via.slaughterhouse.Tray\"\016\n\014Em",
-      "ptyMessage\"\"\n\010AnimalId\022\026\n\016registrationId" +
-      "\030\001 \001(\t\"\036\n\tProductId\022\021\n\tproductId\030\001 \001(\t\"D" +
-      "\n\022AnimalListResponse\022.\n\007animals\030\001 \003(\0132\035." +
-      "dk.via.slaughterhouse.Animal\"G\n\023ProductL" +
-      "istResponse\0220\n\010products\030\001 \003(\0132\036.dk.via.s" +
-      "laughterhouse.Product2\201\003\n\025Slaughterhouse" +
-      "Service\022N\n\016registerAnimal\022\035.dk.via.slaug" +
-      "hterhouse.Animal\032\035.dk.via.slaughterhouse" +
-      ".Animal\022P\n\020getPartsByAnimal\022\037.dk.via.sla" +
-      "ughterhouse.AnimalId\032\033.dk.via.slaughterh",
-      "ouse.Part\022b\n\023getAnimalsInProduct\022 .dk.vi" +
-      "a.slaughterhouse.ProductId\032).dk.via.slau" +
-      "ghterhouse.AnimalListResponse\022b\n\023getProd" +
-      "uctsByAnimal\022\037.dk.via.slaughterhouse.Ani" +
-      "malId\032*.dk.via.slaughterhouse.ProductLis" +
-      "tResponseB\002P\001b\006proto3"
+      "\016\n\006weight\030\002 \001(\001\"L\n\007Product\022\021\n\tproductId\030" +
+      "\001 \001(\t\022.\n\007animals\030\002 \003(\0132\035.dk.via.slaughte" +
+      "rhouse.Animal\"\016\n\014EmptyMessage\"\"\n\010AnimalI" +
+      "d\022\026\n\016registrationId\030\001 \001(\t\"\036\n\tProductId\022\021" +
+      "\n\tproductId\030\001 \001(\t\"D\n\022AnimalListResponse\022" +
+      ".\n\007animals\030\001 \003(\0132\035.dk.via.slaughterhouse" +
+      ".Animal\"G\n\023ProductListResponse\0220\n\010produc" +
+      "ts\030\001 \003(\0132\036.dk.via.slaughterhouse.Product",
+      "2\257\002\n\025SlaughterhouseService\022N\n\016registerAn" +
+      "imal\022\035.dk.via.slaughterhouse.Animal\032\035.dk" +
+      ".via.slaughterhouse.Animal\022b\n\023getAnimals" +
+      "InProduct\022 .dk.via.slaughterhouse.Produc" +
+      "tId\032).dk.via.slaughterhouse.AnimalListRe" +
+      "sponse\022b\n\023getProductsByAnimal\022\037.dk.via.s" +
+      "laughterhouse.AnimalId\032*.dk.via.slaughte" +
+      "rhouse.ProductListResponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -113,50 +95,38 @@ public final class Slaughterhouse {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_Animal_descriptor,
         new java.lang.String[] { "RegistrationId", "Weight", });
-    internal_static_dk_via_slaughterhouse_Part_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_dk_via_slaughterhouse_Part_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_dk_via_slaughterhouse_Part_descriptor,
-        new java.lang.String[] { "PartId", "AnimalId", "Weight", "PartType", });
-    internal_static_dk_via_slaughterhouse_Tray_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_dk_via_slaughterhouse_Tray_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_dk_via_slaughterhouse_Tray_descriptor,
-        new java.lang.String[] { "TrayId", "PartType", "Parts", "MaxWeight", });
     internal_static_dk_via_slaughterhouse_Product_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_dk_via_slaughterhouse_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_Product_descriptor,
-        new java.lang.String[] { "ProductId", "Parts", "Trays", });
+        new java.lang.String[] { "ProductId", "Animals", });
     internal_static_dk_via_slaughterhouse_EmptyMessage_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_dk_via_slaughterhouse_EmptyMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_EmptyMessage_descriptor,
         new java.lang.String[] { });
     internal_static_dk_via_slaughterhouse_AnimalId_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_dk_via_slaughterhouse_AnimalId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_AnimalId_descriptor,
         new java.lang.String[] { "RegistrationId", });
     internal_static_dk_via_slaughterhouse_ProductId_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_dk_via_slaughterhouse_ProductId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_ProductId_descriptor,
         new java.lang.String[] { "ProductId", });
     internal_static_dk_via_slaughterhouse_AnimalListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_dk_via_slaughterhouse_AnimalListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_AnimalListResponse_descriptor,
         new java.lang.String[] { "Animals", });
     internal_static_dk_via_slaughterhouse_ProductListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_dk_via_slaughterhouse_ProductListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_slaughterhouse_ProductListResponse_descriptor,

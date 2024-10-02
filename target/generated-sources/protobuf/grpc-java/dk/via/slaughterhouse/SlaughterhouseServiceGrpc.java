@@ -40,18 +40,6 @@ public final class SlaughterhouseServiceGrpc {
               dk.via.slaughterhouse.Animal.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<dk.via.slaughterhouse.AnimalId,
-      dk.via.slaughterhouse.Part> METHOD_GET_PARTS_BY_ANIMAL =
-      io.grpc.MethodDescriptor.<dk.via.slaughterhouse.AnimalId, dk.via.slaughterhouse.Part>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "dk.via.slaughterhouse.SlaughterhouseService", "getPartsByAnimal"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              dk.via.slaughterhouse.AnimalId.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              dk.via.slaughterhouse.Part.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<dk.via.slaughterhouse.ProductId,
       dk.via.slaughterhouse.AnimalListResponse> METHOD_GET_ANIMALS_IN_PRODUCT =
       io.grpc.MethodDescriptor.<dk.via.slaughterhouse.ProductId, dk.via.slaughterhouse.AnimalListResponse>newBuilder()
@@ -112,13 +100,6 @@ public final class SlaughterhouseServiceGrpc {
 
     /**
      */
-    public void getPartsByAnimal(dk.via.slaughterhouse.AnimalId request,
-        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.Part> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_PARTS_BY_ANIMAL, responseObserver);
-    }
-
-    /**
-     */
     public void getAnimalsInProduct(dk.via.slaughterhouse.ProductId request,
         io.grpc.stub.StreamObserver<dk.via.slaughterhouse.AnimalListResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_GET_ANIMALS_IN_PRODUCT, responseObserver);
@@ -140,13 +121,6 @@ public final class SlaughterhouseServiceGrpc {
                 dk.via.slaughterhouse.Animal,
                 dk.via.slaughterhouse.Animal>(
                   this, METHODID_REGISTER_ANIMAL)))
-          .addMethod(
-            METHOD_GET_PARTS_BY_ANIMAL,
-            asyncUnaryCall(
-              new MethodHandlers<
-                dk.via.slaughterhouse.AnimalId,
-                dk.via.slaughterhouse.Part>(
-                  this, METHODID_GET_PARTS_BY_ANIMAL)))
           .addMethod(
             METHOD_GET_ANIMALS_IN_PRODUCT,
             asyncUnaryCall(
@@ -193,14 +167,6 @@ public final class SlaughterhouseServiceGrpc {
 
     /**
      */
-    public void getPartsByAnimal(dk.via.slaughterhouse.AnimalId request,
-        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.Part> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_PARTS_BY_ANIMAL, getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void getAnimalsInProduct(dk.via.slaughterhouse.ProductId request,
         io.grpc.stub.StreamObserver<dk.via.slaughterhouse.AnimalListResponse> responseObserver) {
       asyncUnaryCall(
@@ -239,13 +205,6 @@ public final class SlaughterhouseServiceGrpc {
     public dk.via.slaughterhouse.Animal registerAnimal(dk.via.slaughterhouse.Animal request) {
       return blockingUnaryCall(
           getChannel(), METHOD_REGISTER_ANIMAL, getCallOptions(), request);
-    }
-
-    /**
-     */
-    public dk.via.slaughterhouse.Part getPartsByAnimal(dk.via.slaughterhouse.AnimalId request) {
-      return blockingUnaryCall(
-          getChannel(), METHOD_GET_PARTS_BY_ANIMAL, getCallOptions(), request);
     }
 
     /**
@@ -291,14 +250,6 @@ public final class SlaughterhouseServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<dk.via.slaughterhouse.Part> getPartsByAnimal(
-        dk.via.slaughterhouse.AnimalId request) {
-      return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_PARTS_BY_ANIMAL, getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<dk.via.slaughterhouse.AnimalListResponse> getAnimalsInProduct(
         dk.via.slaughterhouse.ProductId request) {
       return futureUnaryCall(
@@ -315,9 +266,8 @@ public final class SlaughterhouseServiceGrpc {
   }
 
   private static final int METHODID_REGISTER_ANIMAL = 0;
-  private static final int METHODID_GET_PARTS_BY_ANIMAL = 1;
-  private static final int METHODID_GET_ANIMALS_IN_PRODUCT = 2;
-  private static final int METHODID_GET_PRODUCTS_BY_ANIMAL = 3;
+  private static final int METHODID_GET_ANIMALS_IN_PRODUCT = 1;
+  private static final int METHODID_GET_PRODUCTS_BY_ANIMAL = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -339,10 +289,6 @@ public final class SlaughterhouseServiceGrpc {
         case METHODID_REGISTER_ANIMAL:
           serviceImpl.registerAnimal((dk.via.slaughterhouse.Animal) request,
               (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.Animal>) responseObserver);
-          break;
-        case METHODID_GET_PARTS_BY_ANIMAL:
-          serviceImpl.getPartsByAnimal((dk.via.slaughterhouse.AnimalId) request,
-              (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.Part>) responseObserver);
           break;
         case METHODID_GET_ANIMALS_IN_PRODUCT:
           serviceImpl.getAnimalsInProduct((dk.via.slaughterhouse.ProductId) request,
@@ -386,7 +332,6 @@ public final class SlaughterhouseServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SlaughterhouseServiceDescriptorSupplier())
               .addMethod(METHOD_REGISTER_ANIMAL)
-              .addMethod(METHOD_GET_PARTS_BY_ANIMAL)
               .addMethod(METHOD_GET_ANIMALS_IN_PRODUCT)
               .addMethod(METHOD_GET_PRODUCTS_BY_ANIMAL)
               .build();

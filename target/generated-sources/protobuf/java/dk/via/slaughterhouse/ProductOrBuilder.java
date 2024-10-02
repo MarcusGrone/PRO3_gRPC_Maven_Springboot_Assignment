@@ -18,50 +18,26 @@ public interface ProductOrBuilder extends
       getProductIdBytes();
 
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  java.util.List<dk.via.slaughterhouse.Part> 
-      getPartsList();
+  java.util.List<dk.via.slaughterhouse.Animal> 
+      getAnimalsList();
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  dk.via.slaughterhouse.Part getParts(int index);
+  dk.via.slaughterhouse.Animal getAnimals(int index);
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  int getPartsCount();
+  int getAnimalsCount();
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  java.util.List<? extends dk.via.slaughterhouse.PartOrBuilder> 
-      getPartsOrBuilderList();
+  java.util.List<? extends dk.via.slaughterhouse.AnimalOrBuilder> 
+      getAnimalsOrBuilderList();
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  dk.via.slaughterhouse.PartOrBuilder getPartsOrBuilder(
-      int index);
-
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  java.util.List<dk.via.slaughterhouse.Tray> 
-      getTraysList();
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  dk.via.slaughterhouse.Tray getTrays(int index);
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  int getTraysCount();
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  java.util.List<? extends dk.via.slaughterhouse.TrayOrBuilder> 
-      getTraysOrBuilderList();
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  dk.via.slaughterhouse.TrayOrBuilder getTraysOrBuilder(
+  dk.via.slaughterhouse.AnimalOrBuilder getAnimalsOrBuilder(
       int index);
 }

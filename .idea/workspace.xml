@@ -5,17 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaugherhouse/Client/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaugherhouse/Entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaugherhouse/Entities/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Part.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaugherhouse/Entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaugherhouse/Entities/Tray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Tray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaugherhouse/gRPC/SlaughterhouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/gRPC/SlaughterhouseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Animal$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Animal$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Part.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Tray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Part$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Part$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Part.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/PartOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Product$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Product$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Product$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Product$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/ProductOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/ProductOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Slaughterhouse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Slaughterhouse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Slaughterhouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Slaughterhouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc$SlaughterhouseServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Tray$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Tray$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/Tray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dk/via/slaughterhouse/TrayOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/slaughterhouse.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/slaughterhouse.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Part.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/PartOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/ProductOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Tray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/TrayOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +59,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MarcusGrone"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarcusGrone&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MarcusGrone/PRO3_gRPC_Maven_Springboot_Assignment.git",
-    "accountId": "1bbfbcf5-afd9-476e-862d-4997578f79fd"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MarcusGrone/PRO3_gRPC_Maven_Springboot_Assignment.git&quot;,
+    &quot;accountId&quot;: &quot;1bbfbcf5-afd9-476e-862d-4997578f79fd&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -51,9 +78,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2mqW3a6zPcX9UQnMk3BH7z0ttl7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -62,21 +89,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.PRO3_gRPC_Assignment [compile].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.PRO3_gRPC_Assignment [compile].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
@@ -107,7 +134,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727804394635</updated>
-      <workItem from="1727804395337" duration="5744000" />
+      <workItem from="1727804395337" duration="5821000" />
+      <workItem from="1727891004578" duration="714000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -125,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727809484142</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Small Changes, lots to do.">
+      <option name="closed" value="true" />
+      <created>1727810312823</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727810312823</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +169,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First inital push." />
-    <option name="LAST_COMMIT_MESSAGE" value="First inital push." />
+    <MESSAGE value="Small Changes, lots to do." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small Changes, lots to do." />
   </component>
 </project>

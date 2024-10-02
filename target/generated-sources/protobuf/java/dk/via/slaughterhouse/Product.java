@@ -16,8 +16,7 @@ public  final class Product extends
   }
   private Product() {
     productId_ = "";
-    parts_ = java.util.Collections.emptyList();
-    trays_ = java.util.Collections.emptyList();
+    animals_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -53,20 +52,11 @@ public  final class Product extends
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              parts_ = new java.util.ArrayList<dk.via.slaughterhouse.Part>();
+              animals_ = new java.util.ArrayList<dk.via.slaughterhouse.Animal>();
               mutable_bitField0_ |= 0x00000002;
             }
-            parts_.add(
-                input.readMessage(dk.via.slaughterhouse.Part.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              trays_ = new java.util.ArrayList<dk.via.slaughterhouse.Tray>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            trays_.add(
-                input.readMessage(dk.via.slaughterhouse.Tray.parser(), extensionRegistry));
+            animals_.add(
+                input.readMessage(dk.via.slaughterhouse.Animal.parser(), extensionRegistry));
             break;
           }
         }
@@ -78,10 +68,7 @@ public  final class Product extends
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-        parts_ = java.util.Collections.unmodifiableList(parts_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-        trays_ = java.util.Collections.unmodifiableList(trays_);
+        animals_ = java.util.Collections.unmodifiableList(animals_);
       }
       makeExtensionsImmutable();
     }
@@ -133,74 +120,39 @@ public  final class Product extends
     }
   }
 
-  public static final int PARTS_FIELD_NUMBER = 2;
-  private java.util.List<dk.via.slaughterhouse.Part> parts_;
+  public static final int ANIMALS_FIELD_NUMBER = 2;
+  private java.util.List<dk.via.slaughterhouse.Animal> animals_;
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  public java.util.List<dk.via.slaughterhouse.Part> getPartsList() {
-    return parts_;
+  public java.util.List<dk.via.slaughterhouse.Animal> getAnimalsList() {
+    return animals_;
   }
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  public java.util.List<? extends dk.via.slaughterhouse.PartOrBuilder> 
-      getPartsOrBuilderList() {
-    return parts_;
+  public java.util.List<? extends dk.via.slaughterhouse.AnimalOrBuilder> 
+      getAnimalsOrBuilderList() {
+    return animals_;
   }
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  public int getPartsCount() {
-    return parts_.size();
+  public int getAnimalsCount() {
+    return animals_.size();
   }
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  public dk.via.slaughterhouse.Part getParts(int index) {
-    return parts_.get(index);
+  public dk.via.slaughterhouse.Animal getAnimals(int index) {
+    return animals_.get(index);
   }
   /**
-   * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+   * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
    */
-  public dk.via.slaughterhouse.PartOrBuilder getPartsOrBuilder(
+  public dk.via.slaughterhouse.AnimalOrBuilder getAnimalsOrBuilder(
       int index) {
-    return parts_.get(index);
-  }
-
-  public static final int TRAYS_FIELD_NUMBER = 3;
-  private java.util.List<dk.via.slaughterhouse.Tray> trays_;
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  public java.util.List<dk.via.slaughterhouse.Tray> getTraysList() {
-    return trays_;
-  }
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  public java.util.List<? extends dk.via.slaughterhouse.TrayOrBuilder> 
-      getTraysOrBuilderList() {
-    return trays_;
-  }
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  public int getTraysCount() {
-    return trays_.size();
-  }
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  public dk.via.slaughterhouse.Tray getTrays(int index) {
-    return trays_.get(index);
-  }
-  /**
-   * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-   */
-  public dk.via.slaughterhouse.TrayOrBuilder getTraysOrBuilder(
-      int index) {
-    return trays_.get(index);
+    return animals_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -218,11 +170,8 @@ public  final class Product extends
     if (!getProductIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_);
     }
-    for (int i = 0; i < parts_.size(); i++) {
-      output.writeMessage(2, parts_.get(i));
-    }
-    for (int i = 0; i < trays_.size(); i++) {
-      output.writeMessage(3, trays_.get(i));
+    for (int i = 0; i < animals_.size(); i++) {
+      output.writeMessage(2, animals_.get(i));
     }
   }
 
@@ -234,13 +183,9 @@ public  final class Product extends
     if (!getProductIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productId_);
     }
-    for (int i = 0; i < parts_.size(); i++) {
+    for (int i = 0; i < animals_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, parts_.get(i));
-    }
-    for (int i = 0; i < trays_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, trays_.get(i));
+        .computeMessageSize(2, animals_.get(i));
     }
     memoizedSize = size;
     return size;
@@ -260,10 +205,8 @@ public  final class Product extends
     boolean result = true;
     result = result && getProductId()
         .equals(other.getProductId());
-    result = result && getPartsList()
-        .equals(other.getPartsList());
-    result = result && getTraysList()
-        .equals(other.getTraysList());
+    result = result && getAnimalsList()
+        .equals(other.getAnimalsList());
     return result;
   }
 
@@ -276,13 +219,9 @@ public  final class Product extends
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PRODUCTID_FIELD_NUMBER;
     hash = (53 * hash) + getProductId().hashCode();
-    if (getPartsCount() > 0) {
-      hash = (37 * hash) + PARTS_FIELD_NUMBER;
-      hash = (53 * hash) + getPartsList().hashCode();
-    }
-    if (getTraysCount() > 0) {
-      hash = (37 * hash) + TRAYS_FIELD_NUMBER;
-      hash = (53 * hash) + getTraysList().hashCode();
+    if (getAnimalsCount() > 0) {
+      hash = (37 * hash) + ANIMALS_FIELD_NUMBER;
+      hash = (53 * hash) + getAnimalsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -409,25 +348,18 @@ public  final class Product extends
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getPartsFieldBuilder();
-        getTraysFieldBuilder();
+        getAnimalsFieldBuilder();
       }
     }
     public Builder clear() {
       super.clear();
       productId_ = "";
 
-      if (partsBuilder_ == null) {
-        parts_ = java.util.Collections.emptyList();
+      if (animalsBuilder_ == null) {
+        animals_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        partsBuilder_.clear();
-      }
-      if (traysBuilder_ == null) {
-        trays_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      } else {
-        traysBuilder_.clear();
+        animalsBuilder_.clear();
       }
       return this;
     }
@@ -454,23 +386,14 @@ public  final class Product extends
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.productId_ = productId_;
-      if (partsBuilder_ == null) {
+      if (animalsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          parts_ = java.util.Collections.unmodifiableList(parts_);
+          animals_ = java.util.Collections.unmodifiableList(animals_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.parts_ = parts_;
+        result.animals_ = animals_;
       } else {
-        result.parts_ = partsBuilder_.build();
-      }
-      if (traysBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          trays_ = java.util.Collections.unmodifiableList(trays_);
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.trays_ = trays_;
-      } else {
-        result.trays_ = traysBuilder_.build();
+        result.animals_ = animalsBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -518,55 +441,29 @@ public  final class Product extends
         productId_ = other.productId_;
         onChanged();
       }
-      if (partsBuilder_ == null) {
-        if (!other.parts_.isEmpty()) {
-          if (parts_.isEmpty()) {
-            parts_ = other.parts_;
+      if (animalsBuilder_ == null) {
+        if (!other.animals_.isEmpty()) {
+          if (animals_.isEmpty()) {
+            animals_ = other.animals_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensurePartsIsMutable();
-            parts_.addAll(other.parts_);
+            ensureAnimalsIsMutable();
+            animals_.addAll(other.animals_);
           }
           onChanged();
         }
       } else {
-        if (!other.parts_.isEmpty()) {
-          if (partsBuilder_.isEmpty()) {
-            partsBuilder_.dispose();
-            partsBuilder_ = null;
-            parts_ = other.parts_;
+        if (!other.animals_.isEmpty()) {
+          if (animalsBuilder_.isEmpty()) {
+            animalsBuilder_.dispose();
+            animalsBuilder_ = null;
+            animals_ = other.animals_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            partsBuilder_ = 
+            animalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getPartsFieldBuilder() : null;
+                 getAnimalsFieldBuilder() : null;
           } else {
-            partsBuilder_.addAllMessages(other.parts_);
-          }
-        }
-      }
-      if (traysBuilder_ == null) {
-        if (!other.trays_.isEmpty()) {
-          if (trays_.isEmpty()) {
-            trays_ = other.trays_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureTraysIsMutable();
-            trays_.addAll(other.trays_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.trays_.isEmpty()) {
-          if (traysBuilder_.isEmpty()) {
-            traysBuilder_.dispose();
-            traysBuilder_ = null;
-            trays_ = other.trays_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-            traysBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getTraysFieldBuilder() : null;
-          } else {
-            traysBuilder_.addAllMessages(other.trays_);
+            animalsBuilder_.addAllMessages(other.animals_);
           }
         }
       }
@@ -666,484 +563,244 @@ public  final class Product extends
       return this;
     }
 
-    private java.util.List<dk.via.slaughterhouse.Part> parts_ =
+    private java.util.List<dk.via.slaughterhouse.Animal> animals_ =
       java.util.Collections.emptyList();
-    private void ensurePartsIsMutable() {
+    private void ensureAnimalsIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        parts_ = new java.util.ArrayList<dk.via.slaughterhouse.Part>(parts_);
+        animals_ = new java.util.ArrayList<dk.via.slaughterhouse.Animal>(animals_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        dk.via.slaughterhouse.Part, dk.via.slaughterhouse.Part.Builder, dk.via.slaughterhouse.PartOrBuilder> partsBuilder_;
+        dk.via.slaughterhouse.Animal, dk.via.slaughterhouse.Animal.Builder, dk.via.slaughterhouse.AnimalOrBuilder> animalsBuilder_;
 
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public java.util.List<dk.via.slaughterhouse.Part> getPartsList() {
-      if (partsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(parts_);
+    public java.util.List<dk.via.slaughterhouse.Animal> getAnimalsList() {
+      if (animalsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(animals_);
       } else {
-        return partsBuilder_.getMessageList();
+        return animalsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public int getPartsCount() {
-      if (partsBuilder_ == null) {
-        return parts_.size();
+    public int getAnimalsCount() {
+      if (animalsBuilder_ == null) {
+        return animals_.size();
       } else {
-        return partsBuilder_.getCount();
+        return animalsBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public dk.via.slaughterhouse.Part getParts(int index) {
-      if (partsBuilder_ == null) {
-        return parts_.get(index);
+    public dk.via.slaughterhouse.Animal getAnimals(int index) {
+      if (animalsBuilder_ == null) {
+        return animals_.get(index);
       } else {
-        return partsBuilder_.getMessage(index);
+        return animalsBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder setParts(
-        int index, dk.via.slaughterhouse.Part value) {
-      if (partsBuilder_ == null) {
+    public Builder setAnimals(
+        int index, dk.via.slaughterhouse.Animal value) {
+      if (animalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePartsIsMutable();
-        parts_.set(index, value);
+        ensureAnimalsIsMutable();
+        animals_.set(index, value);
         onChanged();
       } else {
-        partsBuilder_.setMessage(index, value);
+        animalsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder setParts(
-        int index, dk.via.slaughterhouse.Part.Builder builderForValue) {
-      if (partsBuilder_ == null) {
-        ensurePartsIsMutable();
-        parts_.set(index, builderForValue.build());
+    public Builder setAnimals(
+        int index, dk.via.slaughterhouse.Animal.Builder builderForValue) {
+      if (animalsBuilder_ == null) {
+        ensureAnimalsIsMutable();
+        animals_.set(index, builderForValue.build());
         onChanged();
       } else {
-        partsBuilder_.setMessage(index, builderForValue.build());
+        animalsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder addParts(dk.via.slaughterhouse.Part value) {
-      if (partsBuilder_ == null) {
+    public Builder addAnimals(dk.via.slaughterhouse.Animal value) {
+      if (animalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePartsIsMutable();
-        parts_.add(value);
+        ensureAnimalsIsMutable();
+        animals_.add(value);
         onChanged();
       } else {
-        partsBuilder_.addMessage(value);
+        animalsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder addParts(
-        int index, dk.via.slaughterhouse.Part value) {
-      if (partsBuilder_ == null) {
+    public Builder addAnimals(
+        int index, dk.via.slaughterhouse.Animal value) {
+      if (animalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePartsIsMutable();
-        parts_.add(index, value);
+        ensureAnimalsIsMutable();
+        animals_.add(index, value);
         onChanged();
       } else {
-        partsBuilder_.addMessage(index, value);
+        animalsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder addParts(
-        dk.via.slaughterhouse.Part.Builder builderForValue) {
-      if (partsBuilder_ == null) {
-        ensurePartsIsMutable();
-        parts_.add(builderForValue.build());
+    public Builder addAnimals(
+        dk.via.slaughterhouse.Animal.Builder builderForValue) {
+      if (animalsBuilder_ == null) {
+        ensureAnimalsIsMutable();
+        animals_.add(builderForValue.build());
         onChanged();
       } else {
-        partsBuilder_.addMessage(builderForValue.build());
+        animalsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder addParts(
-        int index, dk.via.slaughterhouse.Part.Builder builderForValue) {
-      if (partsBuilder_ == null) {
-        ensurePartsIsMutable();
-        parts_.add(index, builderForValue.build());
+    public Builder addAnimals(
+        int index, dk.via.slaughterhouse.Animal.Builder builderForValue) {
+      if (animalsBuilder_ == null) {
+        ensureAnimalsIsMutable();
+        animals_.add(index, builderForValue.build());
         onChanged();
       } else {
-        partsBuilder_.addMessage(index, builderForValue.build());
+        animalsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder addAllParts(
-        java.lang.Iterable<? extends dk.via.slaughterhouse.Part> values) {
-      if (partsBuilder_ == null) {
-        ensurePartsIsMutable();
+    public Builder addAllAnimals(
+        java.lang.Iterable<? extends dk.via.slaughterhouse.Animal> values) {
+      if (animalsBuilder_ == null) {
+        ensureAnimalsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, parts_);
+            values, animals_);
         onChanged();
       } else {
-        partsBuilder_.addAllMessages(values);
+        animalsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder clearParts() {
-      if (partsBuilder_ == null) {
-        parts_ = java.util.Collections.emptyList();
+    public Builder clearAnimals() {
+      if (animalsBuilder_ == null) {
+        animals_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
-        partsBuilder_.clear();
+        animalsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public Builder removeParts(int index) {
-      if (partsBuilder_ == null) {
-        ensurePartsIsMutable();
-        parts_.remove(index);
+    public Builder removeAnimals(int index) {
+      if (animalsBuilder_ == null) {
+        ensureAnimalsIsMutable();
+        animals_.remove(index);
         onChanged();
       } else {
-        partsBuilder_.remove(index);
+        animalsBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public dk.via.slaughterhouse.Part.Builder getPartsBuilder(
+    public dk.via.slaughterhouse.Animal.Builder getAnimalsBuilder(
         int index) {
-      return getPartsFieldBuilder().getBuilder(index);
+      return getAnimalsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public dk.via.slaughterhouse.PartOrBuilder getPartsOrBuilder(
+    public dk.via.slaughterhouse.AnimalOrBuilder getAnimalsOrBuilder(
         int index) {
-      if (partsBuilder_ == null) {
-        return parts_.get(index);  } else {
-        return partsBuilder_.getMessageOrBuilder(index);
+      if (animalsBuilder_ == null) {
+        return animals_.get(index);  } else {
+        return animalsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public java.util.List<? extends dk.via.slaughterhouse.PartOrBuilder> 
-         getPartsOrBuilderList() {
-      if (partsBuilder_ != null) {
-        return partsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends dk.via.slaughterhouse.AnimalOrBuilder> 
+         getAnimalsOrBuilderList() {
+      if (animalsBuilder_ != null) {
+        return animalsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(parts_);
+        return java.util.Collections.unmodifiableList(animals_);
       }
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public dk.via.slaughterhouse.Part.Builder addPartsBuilder() {
-      return getPartsFieldBuilder().addBuilder(
-          dk.via.slaughterhouse.Part.getDefaultInstance());
+    public dk.via.slaughterhouse.Animal.Builder addAnimalsBuilder() {
+      return getAnimalsFieldBuilder().addBuilder(
+          dk.via.slaughterhouse.Animal.getDefaultInstance());
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public dk.via.slaughterhouse.Part.Builder addPartsBuilder(
+    public dk.via.slaughterhouse.Animal.Builder addAnimalsBuilder(
         int index) {
-      return getPartsFieldBuilder().addBuilder(
-          index, dk.via.slaughterhouse.Part.getDefaultInstance());
+      return getAnimalsFieldBuilder().addBuilder(
+          index, dk.via.slaughterhouse.Animal.getDefaultInstance());
     }
     /**
-     * <code>repeated .dk.via.slaughterhouse.Part parts = 2;</code>
+     * <code>repeated .dk.via.slaughterhouse.Animal animals = 2;</code>
      */
-    public java.util.List<dk.via.slaughterhouse.Part.Builder> 
-         getPartsBuilderList() {
-      return getPartsFieldBuilder().getBuilderList();
+    public java.util.List<dk.via.slaughterhouse.Animal.Builder> 
+         getAnimalsBuilderList() {
+      return getAnimalsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        dk.via.slaughterhouse.Part, dk.via.slaughterhouse.Part.Builder, dk.via.slaughterhouse.PartOrBuilder> 
-        getPartsFieldBuilder() {
-      if (partsBuilder_ == null) {
-        partsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            dk.via.slaughterhouse.Part, dk.via.slaughterhouse.Part.Builder, dk.via.slaughterhouse.PartOrBuilder>(
-                parts_,
+        dk.via.slaughterhouse.Animal, dk.via.slaughterhouse.Animal.Builder, dk.via.slaughterhouse.AnimalOrBuilder> 
+        getAnimalsFieldBuilder() {
+      if (animalsBuilder_ == null) {
+        animalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            dk.via.slaughterhouse.Animal, dk.via.slaughterhouse.Animal.Builder, dk.via.slaughterhouse.AnimalOrBuilder>(
+                animals_,
                 ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
-        parts_ = null;
+        animals_ = null;
       }
-      return partsBuilder_;
-    }
-
-    private java.util.List<dk.via.slaughterhouse.Tray> trays_ =
-      java.util.Collections.emptyList();
-    private void ensureTraysIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        trays_ = new java.util.ArrayList<dk.via.slaughterhouse.Tray>(trays_);
-        bitField0_ |= 0x00000004;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        dk.via.slaughterhouse.Tray, dk.via.slaughterhouse.Tray.Builder, dk.via.slaughterhouse.TrayOrBuilder> traysBuilder_;
-
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public java.util.List<dk.via.slaughterhouse.Tray> getTraysList() {
-      if (traysBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(trays_);
-      } else {
-        return traysBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public int getTraysCount() {
-      if (traysBuilder_ == null) {
-        return trays_.size();
-      } else {
-        return traysBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public dk.via.slaughterhouse.Tray getTrays(int index) {
-      if (traysBuilder_ == null) {
-        return trays_.get(index);
-      } else {
-        return traysBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder setTrays(
-        int index, dk.via.slaughterhouse.Tray value) {
-      if (traysBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTraysIsMutable();
-        trays_.set(index, value);
-        onChanged();
-      } else {
-        traysBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder setTrays(
-        int index, dk.via.slaughterhouse.Tray.Builder builderForValue) {
-      if (traysBuilder_ == null) {
-        ensureTraysIsMutable();
-        trays_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        traysBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder addTrays(dk.via.slaughterhouse.Tray value) {
-      if (traysBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTraysIsMutable();
-        trays_.add(value);
-        onChanged();
-      } else {
-        traysBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder addTrays(
-        int index, dk.via.slaughterhouse.Tray value) {
-      if (traysBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTraysIsMutable();
-        trays_.add(index, value);
-        onChanged();
-      } else {
-        traysBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder addTrays(
-        dk.via.slaughterhouse.Tray.Builder builderForValue) {
-      if (traysBuilder_ == null) {
-        ensureTraysIsMutable();
-        trays_.add(builderForValue.build());
-        onChanged();
-      } else {
-        traysBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder addTrays(
-        int index, dk.via.slaughterhouse.Tray.Builder builderForValue) {
-      if (traysBuilder_ == null) {
-        ensureTraysIsMutable();
-        trays_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        traysBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder addAllTrays(
-        java.lang.Iterable<? extends dk.via.slaughterhouse.Tray> values) {
-      if (traysBuilder_ == null) {
-        ensureTraysIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, trays_);
-        onChanged();
-      } else {
-        traysBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder clearTrays() {
-      if (traysBuilder_ == null) {
-        trays_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-      } else {
-        traysBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public Builder removeTrays(int index) {
-      if (traysBuilder_ == null) {
-        ensureTraysIsMutable();
-        trays_.remove(index);
-        onChanged();
-      } else {
-        traysBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public dk.via.slaughterhouse.Tray.Builder getTraysBuilder(
-        int index) {
-      return getTraysFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public dk.via.slaughterhouse.TrayOrBuilder getTraysOrBuilder(
-        int index) {
-      if (traysBuilder_ == null) {
-        return trays_.get(index);  } else {
-        return traysBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public java.util.List<? extends dk.via.slaughterhouse.TrayOrBuilder> 
-         getTraysOrBuilderList() {
-      if (traysBuilder_ != null) {
-        return traysBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(trays_);
-      }
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public dk.via.slaughterhouse.Tray.Builder addTraysBuilder() {
-      return getTraysFieldBuilder().addBuilder(
-          dk.via.slaughterhouse.Tray.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public dk.via.slaughterhouse.Tray.Builder addTraysBuilder(
-        int index) {
-      return getTraysFieldBuilder().addBuilder(
-          index, dk.via.slaughterhouse.Tray.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .dk.via.slaughterhouse.Tray trays = 3;</code>
-     */
-    public java.util.List<dk.via.slaughterhouse.Tray.Builder> 
-         getTraysBuilderList() {
-      return getTraysFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        dk.via.slaughterhouse.Tray, dk.via.slaughterhouse.Tray.Builder, dk.via.slaughterhouse.TrayOrBuilder> 
-        getTraysFieldBuilder() {
-      if (traysBuilder_ == null) {
-        traysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            dk.via.slaughterhouse.Tray, dk.via.slaughterhouse.Tray.Builder, dk.via.slaughterhouse.TrayOrBuilder>(
-                trays_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
-                getParentForChildren(),
-                isClean());
-        trays_ = null;
-      }
-      return traysBuilder_;
+      return animalsBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

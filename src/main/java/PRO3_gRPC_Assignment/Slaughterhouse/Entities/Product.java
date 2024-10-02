@@ -2,46 +2,28 @@ package PRO3_gRPC_Assignment.Slaughterhouse.Entities;
 
 import java.util.List;
 
-public class Product
-{
+public class Product {
   private String productId;
-  private List<Part> parts;
-  private List<Tray> trays;
+  private List<Animal> animals;
 
-  public Product(String productId, List<Part> parts, List<Tray> trays)
-  {
+  public Product(String productId, List<Animal> animals) {
     this.productId = productId;
-    this.parts = parts;
-    this.trays = trays;
+    this.animals = animals;
   }
 
-  public String getProductId()
-  {
+  public String getProductId() {
     return productId;
   }
 
-  public void setProductId(String productId)
-  {
+  public void setProductId(String productId) {
     this.productId = productId;
   }
 
-  public List<Part> getParts()
-  {
-    return parts;
+  public List<Animal> getAnimals() {
+    return animals;
   }
 
-  public void setParts(List<Part> parts)
-  {
-    this.parts = parts;
-  }
-
-  public List<Tray> getTrays()
-  {
-    return trays;
-  }
-
-  public void setTrays(List<Tray> trays)
-  {
-    this.trays = trays;
+  public void setAnimals(List<Animal> animals) {
+    this.animals = animals;
   }
 }

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface AnimalDAO {
-  private final JdbcTemplate jdbcTemplate;
   Animal create(Animal animal) throws SQLException;
   Animal read(String animalId) throws SQLException;
   ArrayList<Animal> getAllAnimals() throws SQLException;

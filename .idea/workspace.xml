@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Objects changed to Id's">
+    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/interfaces/IAnimalLookUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/interfaces/IAnimalLookUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalLookUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalLookUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/dataConverters/AnimalConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/dataConverters/AnimalConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/GRPCAnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/GRPCAnimalRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/slaughterhouse.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/dk/via/slaughterhouse/SlaughterhouseServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PRO3_gRPC_Assignment/Pro3GRpcAssignmentApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,38 +51,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.PRO3_gRPC_Assignment [clean].executor": "Run",
-    "Maven.PRO3_gRPC_Assignment [compile].executor": "Run",
-    "Maven.PRO3_gRPC_Assignment [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.GRPCServer.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.PRO3_gRPC_Assignment [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PRO3_gRPC_Assignment [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PRO3_gRPC_Assignment [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GRPCServer.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
@@ -142,6 +133,7 @@
       <workItem from="1727804395337" duration="5821000" />
       <workItem from="1727891004578" duration="714000" />
       <workItem from="1727940857676" duration="2494000" />
+      <workItem from="1727953686542" duration="1534000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -223,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727943131512</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server">
+      <option name="closed" value="true" />
+      <created>1727954758668</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727954758668</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +238,7 @@
     <MESSAGE value="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes." />
     <MESSAGE value="Added database connection, implemented jdbcTemplate to make SQL queries from DAO" />
     <MESSAGE value="Removed cache from AnimalRegistrationServiceImpl.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed cache from AnimalRegistrationServiceImpl.java" />
+    <MESSAGE value="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server" />
   </component>
 </project>

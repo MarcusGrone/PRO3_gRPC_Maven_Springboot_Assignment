@@ -43,17 +43,22 @@ import java.util.List;
     return new ArrayList<>(animals);
   }
 
-  @Override public ArrayList<Animal> getAnimalsFromProduct(String productId)
-      throws SQLException
-  {
-    String sql = "SELECT DISTINCT a.animal_id, a.weight " + "FROM Animal a "
-        + "JOIN AnimalPart p ON a.animal_id = p.animal_id "
-        + "JOIN Tray_AnimalPart tap ON p.part_id = tap.part_id "
-        + "JOIN Product_Tray pt ON tap.tray_id = pt.tray_id "
-        + "WHERE pt.product_id = ?";
-    List<Animal> animals = jdbcTemplate.query(sql, new Object[] {productId},
-        (rs, rowNum) -> new Animal(rs.getString("animal_id"),
-            rs.getDouble("weight")));
+  @Override
+  public ArrayList<Animal> getAnimalsFromProduct(String productId) throws SQLException {
+    String sql = "SELECT DISTINCT a.animal_id, a.weight_kilogram " +
+        "FROM Animal a " +
+        "JOIN AnimalPart ap ON a.animal_id = ap.animal_id " +
+        "JOIN Product p ON ap.part_id = p.part_id " +
+        "JOIN Tray t ON p.product_id = t.product_id " +
+        "WHERE p.product_id = ?";
+
+    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{productId},
+        (rs, rowNum) -> new Animal(
+            String.valueOf(rs.getInt("animal_id")),
+            rs.getDouble("weight_kilogram")
+        )
+    );
+
     return new ArrayList<>(animals);
   }
 }

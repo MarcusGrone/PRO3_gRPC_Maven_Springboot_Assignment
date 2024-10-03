@@ -30,27 +30,25 @@ import java.util.List;
     String sql = "SELECT * FROM Product";
     List<Product> products = jdbcTemplate.query(sql,
         (rs, rowNum) -> new Product(rs.getString("product_id"),
-            new ArrayList<>(),
-            new ArrayList<>()));
+            new ArrayList<>(), new ArrayList<>()));
     return new ArrayList<>(products);
   }
 
-  @Override
   public ArrayList<Product> getAllProductsFromAnimal(String animalId) throws SQLException {
     String sql = "SELECT DISTINCT p.product_id " +
         "FROM Product p " +
-        "JOIN Product_Tray pt ON p.product_id = pt.product_id " +
-        "JOIN Tray t ON pt.tray_id = t.tray_id " +
-        "JOIN Tray_AnimalPart tap ON t.tray_id = tap.tray_id " +
-        "JOIN AnimalPart ap ON tap.part_id = ap.part_id " +
+        "JOIN AnimalPart ap ON p.part_id = ap.part_id " +
+        "JOIN Tray t ON p.product_id = t.product_id " +
         "WHERE ap.animal_id = ?";
 
     List<Product> products = jdbcTemplate.query(sql, new Object[]{animalId},
         (rs, rowNum) -> new Product(
-            rs.getString("product_id"),
+            String.valueOf(rs.getInt("product_id")),
             new ArrayList<>(),
             new ArrayList<>()
-        ));
+        )
+    );
+
     return new ArrayList<>(products);
   }
 }

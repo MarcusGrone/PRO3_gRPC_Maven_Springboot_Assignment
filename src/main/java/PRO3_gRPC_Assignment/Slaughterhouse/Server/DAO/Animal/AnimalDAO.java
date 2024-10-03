@@ -12,5 +12,5 @@ public interface AnimalDAO {
   Animal create(Animal animal) throws SQLException;
   Animal read(int animalId) throws SQLException;
   ArrayList<Animal> getAllAnimals() throws SQLException;
-  ArrayList<Animal> getAnimalsFromProduct(Product product) throws SQLException;
+  ArrayList<Animal> getAnimalsFromProduct(String productId) throws SQLException;
 }

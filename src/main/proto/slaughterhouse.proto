@@ -44,13 +44,15 @@ message AnimalPartsData {
 
 message TrayData {
   string trayId = 1;
-  repeated AnimalPartId animalParts = 2;
+  string partType = 2;
+  double maxWeight = 3;
+  repeated AnimalPartData animalPartsData = 4;
 }
 
 message ProductData {
   string productId = 1;
   repeated TrayData trayIds = 2;
-  repeated AnimalPartId animalPartIds = 3;
+  repeated AnimalPartData animalPartsData = 3;
 }
 
 message ProductId {
@@ -87,4 +89,8 @@ service SlaughterhouseService {
   rpc getAllAnimals(EmptyMessage) returns (AnimalsData);
   rpc getAnimalParts(EmptyMessage) returns (AnimalPartsData);
   rpc getAllProducts(EmptyMessage) returns (ProductsData);
+
+  //Specific get all:
+  rpc getAnimalsFromProductId(ProductId) returns (AnimalsData);
+  rpc getProductFromAnimalId(AnimalId) returns (ProductsData);
 }

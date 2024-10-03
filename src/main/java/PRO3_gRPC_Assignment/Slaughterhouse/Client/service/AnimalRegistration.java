@@ -21,7 +21,7 @@ public class AnimalRegistration extends Client implements IAnimalRegistration {
         try {
             SlaughterhouseServiceGrpc.SlaughterhouseServiceBlockingStub stub = SlaughterhouseServiceGrpc.newBlockingStub(channel);
 
-            AnimalData data = AnimalConverter.convertTogRPCAnimalData(new Animal("0", weightInKg));
+            AnimalData data = AnimalConverter.convertToGrpcAnimalData(new Animal("0", weightInKg));
 
             AnimalData createdAnimal = stub.registerAnimal(data);
 

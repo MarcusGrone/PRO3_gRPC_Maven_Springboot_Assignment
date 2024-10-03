@@ -219,6 +219,30 @@ public final class SlaughterhouseServiceGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               dk.via.slaughterhouse.ProductsData.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<dk.via.slaughterhouse.ProductId,
+      dk.via.slaughterhouse.AnimalsData> METHOD_GET_ANIMALS_FROM_PRODUCT_ID =
+      io.grpc.MethodDescriptor.<dk.via.slaughterhouse.ProductId, dk.via.slaughterhouse.AnimalsData>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "dk.via.slaughterhouse.SlaughterhouseService", "getAnimalsFromProductId"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.slaughterhouse.ProductId.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.slaughterhouse.AnimalsData.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<dk.via.slaughterhouse.AnimalId,
+      dk.via.slaughterhouse.ProductsData> METHOD_GET_PRODUCT_FROM_ANIMAL_ID =
+      io.grpc.MethodDescriptor.<dk.via.slaughterhouse.AnimalId, dk.via.slaughterhouse.ProductsData>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "dk.via.slaughterhouse.SlaughterhouseService", "getProductFromAnimalId"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.slaughterhouse.AnimalId.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.slaughterhouse.ProductsData.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -374,6 +398,23 @@ public final class SlaughterhouseServiceGrpc {
       asyncUnimplementedUnaryCall(METHOD_GET_ALL_PRODUCTS, responseObserver);
     }
 
+    /**
+     * <pre>
+     *Specific get all:
+     * </pre>
+     */
+    public void getAnimalsFromProductId(dk.via.slaughterhouse.ProductId request,
+        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.AnimalsData> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ANIMALS_FROM_PRODUCT_ID, responseObserver);
+    }
+
+    /**
+     */
+    public void getProductFromAnimalId(dk.via.slaughterhouse.AnimalId request,
+        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.ProductsData> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_PRODUCT_FROM_ANIMAL_ID, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -488,6 +529,20 @@ public final class SlaughterhouseServiceGrpc {
                 dk.via.slaughterhouse.EmptyMessage,
                 dk.via.slaughterhouse.ProductsData>(
                   this, METHODID_GET_ALL_PRODUCTS)))
+          .addMethod(
+            METHOD_GET_ANIMALS_FROM_PRODUCT_ID,
+            asyncUnaryCall(
+              new MethodHandlers<
+                dk.via.slaughterhouse.ProductId,
+                dk.via.slaughterhouse.AnimalsData>(
+                  this, METHODID_GET_ANIMALS_FROM_PRODUCT_ID)))
+          .addMethod(
+            METHOD_GET_PRODUCT_FROM_ANIMAL_ID,
+            asyncUnaryCall(
+              new MethodHandlers<
+                dk.via.slaughterhouse.AnimalId,
+                dk.via.slaughterhouse.ProductsData>(
+                  this, METHODID_GET_PRODUCT_FROM_ANIMAL_ID)))
           .build();
     }
   }
@@ -652,6 +707,25 @@ public final class SlaughterhouseServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_ALL_PRODUCTS, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     *Specific get all:
+     * </pre>
+     */
+    public void getAnimalsFromProductId(dk.via.slaughterhouse.ProductId request,
+        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.AnimalsData> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_FROM_PRODUCT_ID, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getProductFromAnimalId(dk.via.slaughterhouse.AnimalId request,
+        io.grpc.stub.StreamObserver<dk.via.slaughterhouse.ProductsData> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_PRODUCT_FROM_ANIMAL_ID, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -797,6 +871,23 @@ public final class SlaughterhouseServiceGrpc {
     public dk.via.slaughterhouse.ProductsData getAllProducts(dk.via.slaughterhouse.EmptyMessage request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_ALL_PRODUCTS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *Specific get all:
+     * </pre>
+     */
+    public dk.via.slaughterhouse.AnimalsData getAnimalsFromProductId(dk.via.slaughterhouse.ProductId request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_ANIMALS_FROM_PRODUCT_ID, getCallOptions(), request);
+    }
+
+    /**
+     */
+    public dk.via.slaughterhouse.ProductsData getProductFromAnimalId(dk.via.slaughterhouse.AnimalId request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_GET_PRODUCT_FROM_ANIMAL_ID, getCallOptions(), request);
     }
   }
 
@@ -960,6 +1051,25 @@ public final class SlaughterhouseServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_ALL_PRODUCTS, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     *Specific get all:
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<dk.via.slaughterhouse.AnimalsData> getAnimalsFromProductId(
+        dk.via.slaughterhouse.ProductId request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_ANIMALS_FROM_PRODUCT_ID, getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<dk.via.slaughterhouse.ProductsData> getProductFromAnimalId(
+        dk.via.slaughterhouse.AnimalId request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_PRODUCT_FROM_ANIMAL_ID, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_ANIMAL = 0;
@@ -978,6 +1088,8 @@ public final class SlaughterhouseServiceGrpc {
   private static final int METHODID_GET_ALL_ANIMALS = 13;
   private static final int METHODID_GET_ANIMAL_PARTS = 14;
   private static final int METHODID_GET_ALL_PRODUCTS = 15;
+  private static final int METHODID_GET_ANIMALS_FROM_PRODUCT_ID = 16;
+  private static final int METHODID_GET_PRODUCT_FROM_ANIMAL_ID = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1060,6 +1172,14 @@ public final class SlaughterhouseServiceGrpc {
           serviceImpl.getAllProducts((dk.via.slaughterhouse.EmptyMessage) request,
               (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.ProductsData>) responseObserver);
           break;
+        case METHODID_GET_ANIMALS_FROM_PRODUCT_ID:
+          serviceImpl.getAnimalsFromProductId((dk.via.slaughterhouse.ProductId) request,
+              (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.AnimalsData>) responseObserver);
+          break;
+        case METHODID_GET_PRODUCT_FROM_ANIMAL_ID:
+          serviceImpl.getProductFromAnimalId((dk.via.slaughterhouse.AnimalId) request,
+              (io.grpc.stub.StreamObserver<dk.via.slaughterhouse.ProductsData>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1109,6 +1229,8 @@ public final class SlaughterhouseServiceGrpc {
               .addMethod(METHOD_GET_ALL_ANIMALS)
               .addMethod(METHOD_GET_ANIMAL_PARTS)
               .addMethod(METHOD_GET_ALL_PRODUCTS)
+              .addMethod(METHOD_GET_ANIMALS_FROM_PRODUCT_ID)
+              .addMethod(METHOD_GET_PRODUCT_FROM_ANIMAL_ID)
               .build();
         }
       }

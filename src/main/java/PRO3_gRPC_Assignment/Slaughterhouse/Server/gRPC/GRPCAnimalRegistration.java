@@ -4,6 +4,8 @@ import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.Animal;
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.AnimalConverter;
 import PRO3_gRPC_Assignment.Slaughterhouse.Server.service.animalRegistration.IAnimalRegistrationService;
 import dk.via.slaughterhouse.AnimalData;
+import dk.via.slaughterhouse.AnimalsData;
+import dk.via.slaughterhouse.ProductId;
 import dk.via.slaughterhouse.SlaughterhouseServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
@@ -24,7 +26,7 @@ public class GRPCAnimalRegistration extends SlaughterhouseServiceGrpc.Slaughterh
 
         Animal createdAnimal = animalRegistrationService.registerAnimal(receivedAnimal);
 
-        AnimalData response = AnimalConverter.convertTogRPCAnimalData(createdAnimal);
+        AnimalData response = AnimalConverter.convertToGrpcAnimalData(createdAnimal);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

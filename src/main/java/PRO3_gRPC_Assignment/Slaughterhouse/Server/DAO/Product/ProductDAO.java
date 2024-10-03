@@ -9,6 +9,5 @@ import java.util.ArrayList;
 public interface ProductDAO {
   Product create(Product product) throws SQLException;
   ArrayList<Product> getAllProducts() throws SQLException;
-
   ArrayList<Product> getAllProductsFromAnimal(String animalId) throws SQLException;
 }

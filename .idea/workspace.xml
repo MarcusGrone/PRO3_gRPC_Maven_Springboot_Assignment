@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Added database connection, implemented jdbcTemplate to make SQL queries from DAO" />
+    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Removed cache from AnimalRegistrationServiceImpl.java">
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +129,7 @@
       <updated>1727804394635</updated>
       <workItem from="1727804395337" duration="5821000" />
       <workItem from="1727891004578" duration="714000" />
-      <workItem from="1727940857676" duration="1519000" />
+      <workItem from="1727940857676" duration="2494000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -201,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727942247721</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed cache from AnimalRegistrationServiceImpl.java">
+      <option name="closed" value="true" />
+      <created>1727943131512</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1727943131512</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +225,7 @@
     <MESSAGE value="Updated Protocol and added structure and started implementing client services." />
     <MESSAGE value="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes." />
     <MESSAGE value="Added database connection, implemented jdbcTemplate to make SQL queries from DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added database connection, implemented jdbcTemplate to make SQL queries from DAO" />
+    <MESSAGE value="Removed cache from AnimalRegistrationServiceImpl.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed cache from AnimalRegistrationServiceImpl.java" />
   </component>
 </project>

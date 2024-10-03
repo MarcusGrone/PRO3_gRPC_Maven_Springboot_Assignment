@@ -13,7 +13,6 @@ import java.util.Map;
 public class AnimalRegistrationServiceImpl implements IAnimalRegistrationService {
 
     private final AnimalDAO animalDAO;
-    private final Map<String, Animal> animalCache = new HashMap<>();
 
     @Autowired
     public AnimalRegistrationServiceImpl(AnimalDAO animalDAO) {
@@ -24,8 +23,6 @@ public class AnimalRegistrationServiceImpl implements IAnimalRegistrationService
     public Animal registerAnimal(Animal animal) {
         try {
             Animal newAnimal = animalDAO.create(animal);
-
-            animalCache.put(newAnimal.getRegistrationId(), newAnimal);
 
             return newAnimal;
         } catch (SQLException e) {

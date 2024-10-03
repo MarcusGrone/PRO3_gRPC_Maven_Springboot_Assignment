@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Updated Protocol and added structure and started implementing client services.">
+    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/interfaces/IAnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/interfaces/IAnimalRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/AnimalPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/AnimalPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/PartType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/PartType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities/Tray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Tray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/AnimalPart/AnimalPartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/AnimalPart/AnimalPartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Tray/TrayDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Tray/TrayDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/DataConverters/AnimalConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/dataConverters/AnimalConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/deleteme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/slaughterhouse.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PRO3_gRPC_Assignment/Pro3GRpcAssignmentApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +42,9 @@
     &quot;accountId&quot;: &quot;1bbfbcf5-afd9-476e-862d-4997578f79fd&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -63,20 +58,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.PRO3_gRPC_Assignment [clean].executor": "Run",
     "Maven.PRO3_gRPC_Assignment [compile].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.GRPCServer.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   },
@@ -121,8 +122,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -136,6 +136,7 @@
       <updated>1727804394635</updated>
       <workItem from="1727804395337" duration="5821000" />
       <workItem from="1727891004578" duration="714000" />
+      <workItem from="1727940857676" duration="1152000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -185,7 +186,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727899443757</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes.">
+      <option name="closed" value="true" />
+      <created>1727903234618</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727903234618</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes.">
+      <option name="closed" value="true" />
+      <created>1727903246112</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727903246112</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +214,7 @@
     <MESSAGE value="Updated Protocol" />
     <MESSAGE value="Added Server and Dao Packages" />
     <MESSAGE value="Updated Protocol and added structure and started implementing client services." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Protocol and added structure and started implementing client services." />
+    <MESSAGE value="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished &quot;hul igennem&quot; for register animal, all there is needed is database connection to be set up properly, and DAO implemented. Created more structure. Edited DAO interfaces create methods to take the Entity type as argument instead of Entitiy's attributes." />
   </component>
 </project>

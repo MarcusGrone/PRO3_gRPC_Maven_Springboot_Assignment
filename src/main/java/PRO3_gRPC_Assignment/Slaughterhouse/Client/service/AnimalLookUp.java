@@ -7,7 +7,7 @@ import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.Animal
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.ProductConverter;
 import dk.via.slaughterhouse.AnimalsData;
 import dk.via.slaughterhouse.ProductsData;
-import dk.via.slaughterhouse.SlaughterhouseServiceGrpc;
+import dk.via.slaughterhouse.AnimalLookUpServiceGrpc;
 import io.grpc.ManagedChannel;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class AnimalLookUp extends Client implements IAnimalLookUp {
         ManagedChannel channel = channel();
 
         try {
-            SlaughterhouseServiceGrpc.SlaughterhouseServiceBlockingStub stub = SlaughterhouseServiceGrpc.newBlockingStub(channel);
+            AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(channel);
 
             AnimalsData animalsData = stub.getAnimalsFromProductId(ProductConverter.convertTogRPCProductId(productId));
 
@@ -41,7 +41,7 @@ public class AnimalLookUp extends Client implements IAnimalLookUp {
         ManagedChannel channel = channel();
 
         try {
-            SlaughterhouseServiceGrpc.SlaughterhouseServiceBlockingStub stub = SlaughterhouseServiceGrpc.newBlockingStub(channel);
+            AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(channel);
 
             ProductsData productsData = stub.getProductFromAnimalId(AnimalConverter.convertToGrpcAnimalId(animalId));
 

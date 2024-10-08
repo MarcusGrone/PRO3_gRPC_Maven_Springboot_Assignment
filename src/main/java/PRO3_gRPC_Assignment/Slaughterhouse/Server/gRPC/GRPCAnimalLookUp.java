@@ -6,13 +6,14 @@ import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.Animal
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.ProductConverter;
 import PRO3_gRPC_Assignment.Slaughterhouse.Server.service.animalLookUp.IAnimalLookUpService;
 import dk.via.slaughterhouse.*;
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
 import java.util.List;
 
 @GrpcService
-public class GRPCAnimalLookUp extends SlaughterhouseServiceGrpc.SlaughterhouseServiceImplBase {
+public class GRPCAnimalLookUp extends AnimalLookUpServiceGrpc.AnimalLookUpServiceImplBase {
 
     private final IAnimalLookUpService animalLookUpService;
 
@@ -51,9 +52,12 @@ public class GRPCAnimalLookUp extends SlaughterhouseServiceGrpc.SlaughterhouseSe
 
             responseObserver.onNext(data);
             responseObserver.onCompleted();
-        } catch (Exception e)
-        {
-            responseObserver.onError(e);
+        } catch (Exception e) {
+            // Handle exception and return error
+            responseObserver.onError(Status.INTERNAL
+                    .withDescription("An error occurred while processing the request.")
+                    .augmentDescription(e.getMessage())
+                    .asRuntimeException());
         }
     }
 }

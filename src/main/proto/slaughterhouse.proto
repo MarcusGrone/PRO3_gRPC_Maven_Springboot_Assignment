@@ -51,7 +51,7 @@ message TrayData {
 
 message ProductData {
   string productId = 1;
-  repeated TrayData trayIds = 2;
+  repeated TrayData traysData = 2;
   repeated AnimalPartData animalPartsData = 3;
 }
 
@@ -63,34 +63,11 @@ message ProductsData {
   repeated ProductData products = 1;
 }
 
-service SlaughterhouseService {
-  // Create:
-  rpc registerAnimal(AnimalData) returns (AnimalData);
-  rpc registerAnimalPart(AnimalPartData) returns (AnimalPartData);
-  rpc registerProduct(ProductData) returns (ProductData);
+service AnimalLookUpService {
+  rpc GetAnimalsFromProductId (ProductId) returns (AnimalsData);
+  rpc GetProductFromAnimalId (AnimalId) returns (ProductsData);
+}
 
-  // Read:
-  rpc readAnimal(AnimalId) returns (AnimalData);
-  rpc readAnimalPart(AnimalPartId) returns (AnimalPartData);
-  rpc readProduct(ProductId) returns (ProductData);
-  rpc readPartType(PartTypeId) returns (PartTypeData);
-
-  // Update:
-  rpc updateAnimal(AnimalData) returns (EmptyMessage);
-  rpc updateAnimalPart(AnimalPartData) returns (EmptyMessage);
-  rpc updateProduct(ProductData) returns (EmptyMessage);
-
-  // Delete:
-  rpc removeAnimal(AnimalData) returns (EmptyMessage);
-  rpc removeAnimalPart(AnimalPartData) returns (EmptyMessage);
-  rpc removeProduct(ProductData) returns (EmptyMessage);
-
-  // Get All:
-  rpc getAllAnimals(EmptyMessage) returns (AnimalsData);
-  rpc getAnimalParts(EmptyMessage) returns (AnimalPartsData);
-  rpc getAllProducts(EmptyMessage) returns (ProductsData);
-
-  //Specific get all:
-  rpc getAnimalsFromProductId(ProductId) returns (AnimalsData);
-  rpc getProductFromAnimalId(AnimalId) returns (ProductsData);
+service AnimalRegistrationService {
+  rpc RegisterAnimal (AnimalData) returns (AnimalData);
 }

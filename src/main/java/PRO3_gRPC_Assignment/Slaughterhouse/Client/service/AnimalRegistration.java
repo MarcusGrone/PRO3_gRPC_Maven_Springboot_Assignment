@@ -4,7 +4,7 @@ import PRO3_gRPC_Assignment.Slaughterhouse.Client.interfaces.IAnimalRegistration
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.Animal;
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.dataConverters.AnimalConverter;
 import dk.via.slaughterhouse.AnimalData;
-import dk.via.slaughterhouse.SlaughterhouseServiceGrpc;
+import dk.via.slaughterhouse.AnimalRegistrationServiceGrpc;
 import io.grpc.ManagedChannel;
 
 public class AnimalRegistration extends Client implements IAnimalRegistration {
@@ -19,7 +19,7 @@ public class AnimalRegistration extends Client implements IAnimalRegistration {
         ManagedChannel channel = channel();
 
         try {
-            SlaughterhouseServiceGrpc.SlaughterhouseServiceBlockingStub stub = SlaughterhouseServiceGrpc.newBlockingStub(channel);
+            AnimalRegistrationServiceGrpc.AnimalRegistrationServiceBlockingStub stub = AnimalRegistrationServiceGrpc.newBlockingStub(channel);
 
             AnimalData data = AnimalConverter.convertToGrpcAnimalData(new Animal("0", weightInKg));
 

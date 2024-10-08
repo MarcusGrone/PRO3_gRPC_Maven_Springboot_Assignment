@@ -41,7 +41,7 @@ import java.util.List;
         "JOIN Tray t ON p.product_id = t.product_id " +
         "WHERE ap.animal_id = ?";
 
-    List<Product> products = jdbcTemplate.query(sql, new Object[]{animalId},
+    List<Product> products = jdbcTemplate.query(sql, new Object[]{Integer.valueOf(animalId)},
         (rs, rowNum) -> new Product(
             String.valueOf(rs.getInt("product_id")),
             new ArrayList<>(),

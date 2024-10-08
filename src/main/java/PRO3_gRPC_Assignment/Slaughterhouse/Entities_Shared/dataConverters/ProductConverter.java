@@ -21,7 +21,7 @@ public class ProductConverter {
         return ProductData.newBuilder()
                 .setProductId(product.getProductId())
                 .addAllAnimalPartsData(animalPartsData)
-                .addAllTrayIds(trayDataList)
+                .addAllTraysData(trayDataList)
                 .build();
     }
 
@@ -30,7 +30,7 @@ public class ProductConverter {
                 .map(AnimalPartConverter::convertToAnimalPart)
                 .collect(Collectors.toList());
 
-        List<Tray> trays = productData.getTrayIdsList().stream()
+        List<Tray> trays = productData.getTraysDataList().stream()
                 .map(TrayConverter::convertToTray)
                 .collect(Collectors.toList());
 

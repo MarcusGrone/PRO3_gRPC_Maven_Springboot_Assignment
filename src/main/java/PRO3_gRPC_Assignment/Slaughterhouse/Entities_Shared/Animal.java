@@ -1,5 +1,7 @@
 package PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared;
 
+import java.math.BigDecimal;
+
 public class Animal {
   private String registrationId;
   private double weight;

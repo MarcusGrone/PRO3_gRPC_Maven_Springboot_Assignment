@@ -7,6 +7,7 @@ import dk.via.slaughterhouse.AnimalData;
 import dk.via.slaughterhouse.AnimalRegistrationServiceGrpc;
 import dk.via.slaughterhouse.AnimalsData;
 import dk.via.slaughterhouse.ProductId;
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
@@ -22,12 +23,20 @@ public class GRPCAnimalRegistration extends AnimalRegistrationServiceGrpc.Animal
     @Override
     public void registerAnimal(AnimalData request, StreamObserver<AnimalData> responseObserver)
     {
-        Animal receivedAnimal = AnimalConverter.convertToAnimal(request);
+        try {
+            Animal receivedAnimal = AnimalConverter.convertToAnimal(request);
 
-        Animal createdAnimal = animalRegistrationService.registerAnimal(receivedAnimal);
+            Animal createdAnimal = animalRegistrationService.registerAnimal(receivedAnimal);
 
-        AnimalData response = AnimalConverter.convertToGrpcAnimalData(createdAnimal);
-        responseObserver.onNext(response);
-        responseObserver.onCompleted();
+            AnimalData response = AnimalConverter.convertToGrpcAnimalData(createdAnimal);
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            // Handle exception and return error
+            responseObserver.onError(Status.INTERNAL
+                    .withDescription("An error occurred while processing the request.")
+                    .augmentDescription(e.getMessage())
+                    .asRuntimeException());
+        }
     }
 }

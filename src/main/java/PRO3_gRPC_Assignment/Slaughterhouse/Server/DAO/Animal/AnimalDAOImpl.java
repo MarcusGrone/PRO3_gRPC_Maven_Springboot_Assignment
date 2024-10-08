@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +22,8 @@ import java.util.List;
 
   @Override public Animal create(Animal animal) throws SQLException
   {
-    String sql = "INSERT INTO Animal (animal_id, weight) VALUES (?, ?)";
-    jdbcTemplate.update(sql, animal.getRegistrationId(), animal.getWeight());
+    String sql = "INSERT INTO animal (weight_kilogram) VALUES (?)";
+    jdbcTemplate.update(sql, BigDecimal.valueOf(animal.getWeight()));
     return animal;
   }
 
@@ -31,7 +32,7 @@ import java.util.List;
     String sql = "SELECT * FROM Animal WHERE animal_ID = ?";
     return jdbcTemplate.queryForObject(sql, new Object[] {animalId},
         (rs, rowNum) -> new Animal(rs.getString("animal_id"),
-            rs.getDouble("weight")));
+            rs.getDouble("weight_kilogram")));
   }
 
   @Override public ArrayList<Animal> getAllAnimals() throws SQLException
@@ -39,7 +40,7 @@ import java.util.List;
     String sql = "SELECT * FROM Animal";
     List<Animal> animals = jdbcTemplate.query(sql,
         (rs, rowNum) -> new Animal(rs.getString("animal_id"),
-            rs.getDouble("weight")));
+            rs.getDouble("weight_kilogram")));
     return new ArrayList<>(animals);
   }
 
@@ -52,7 +53,7 @@ import java.util.List;
         "JOIN Tray t ON p.product_id = t.product_id " +
         "WHERE p.product_id = ?";
 
-    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{productId},
+    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{Integer.valueOf(productId)},
         (rs, rowNum) -> new Animal(
             String.valueOf(rs.getInt("animal_id")),
             rs.getDouble("weight_kilogram")

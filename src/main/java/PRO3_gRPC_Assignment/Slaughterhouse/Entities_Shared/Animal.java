@@ -27,4 +27,6 @@ public class Animal {
   public void setWeight(double weight) {
     this.weight = weight;
   }
+
+
 }

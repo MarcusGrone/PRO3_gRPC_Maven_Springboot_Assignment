@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer">
+      <change afterPath="$PROJECT_DIR$/src/test/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalLookUpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/AnimalRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/GRPCAnimalRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/gRPC/GRPCAnimalRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PRO3_gRPC_Assignment/Pro3GRpcAssignmentApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/dk/via/slaughterhouse/Slaughterhouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -52,45 +59,139 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.PRO3_gRPC_Assignment [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GRPCServer.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AnimalLookUpServiceImplTest.testGetProductsFromAnimalId.executor": "Run",
+    "JUnit.AnimalLookUpTest.executor": "Run",
+    "JUnit.AnimalLookUpTest.getProductsFromAnimalId_ReturnsProductList.executor": "Run",
+    "JUnit.AnimalLookUpTest.testGetAnimalsFromProductId.executor": "Run",
+    "JUnit.AnimalRegistrationMockitoTest.executor": "Run",
+    "JUnit.AnimalRegistrationTest.executor": "Run",
+    "JUnit.AnimalRegistrationTest.registerNewAnimal.executor": "Debug",
+    "Maven.PRO3_gRPC_Assignment [clean,install].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [clean].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [compile].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [dependency:tree].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [install].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [mvn,clean,test].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [test].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.GRPCServer.executor": "Run",
+    "Spring Boot.Pro3GRpcAssignmentApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="PRO3_gRPC_Assignment.Slaughterhouse.Client.service" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="PRO3_gRPC_Assignment.Slaughterhouse.Client.service" />
+      <recent name="PRO3_gRPC_Assignment" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
+      <command value="mvn mvn clean test" />
+      <command value="mvn test" />
+      <command value="mvm dependency: tree" />
+      <command value="mvn dependency:tree" />
+      <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GRPCServer">
-    <configuration name="GRPCServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Pro3GRpcAssignmentApplication">
+    <configuration name="AnimalLookUpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PRO3_gRPC_Assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service" />
+      <option name="MAIN_CLASS_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.AnimalLookUpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalLookUpTest.testGetAnimalsFromProductId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PRO3_gRPC_Assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service" />
+      <option name="MAIN_CLASS_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.AnimalLookUpTest" />
+      <option name="METHOD_NAME" value="testGetAnimalsFromProductId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalRegistrationTest" type="JUnit" factoryName="JUnit" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="PRO3_gRPC_Assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service" />
+      <option name="MAIN_CLASS_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.AnimalRegistrationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalRegistrationTest.registerNewAnimal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PRO3_gRPC_Assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service" />
+      <option name="MAIN_CLASS_NAME" value="PRO3_gRPC_Assignment.Slaughterhouse.Client.service.AnimalRegistrationTest" />
+      <option name="METHOD_NAME" value="registerNewAnimal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GRPCServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="PRO3_gRPC_Assignment" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="PRO3_gRPC_Assignment.Slaughterhouse.Server.GRPCServer" />
       <extension name="coverage">
@@ -110,16 +211,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AnimalLookUpTest.testGetAnimalsFromProductId" />
+      <item itemvalue="JUnit.AnimalLookUpTest" />
+      <item itemvalue="JUnit.AnimalRegistrationTest" />
+      <item itemvalue="JUnit.AnimalRegistrationTest.registerNewAnimal" />
+      <item itemvalue="Spring Boot.Pro3GRpcAssignmentApplication" />
+      <item itemvalue="Spring Boot.GRPCServer" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnimalRegistrationTest" />
+        <item itemvalue="JUnit.AnimalLookUpTest" />
+        <item itemvalue="JUnit.AnimalRegistrationTest.registerNewAnimal" />
         <item itemvalue="Spring Boot.GRPCServer" />
+        <item itemvalue="JUnit.AnimalLookUpTest.testGetAnimalsFromProductId" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -135,6 +249,7 @@
       <workItem from="1727891004578" duration="714000" />
       <workItem from="1727940857676" duration="2494000" />
       <workItem from="1727953686542" duration="1534000" />
+      <workItem from="1728586838291" duration="6620000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -250,6 +365,16 @@
     <MESSAGE value="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server" />
     <MESSAGE value="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

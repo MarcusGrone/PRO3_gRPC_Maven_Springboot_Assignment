@@ -1,10 +1,10 @@
 PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\Animal.class
 PRO3_gRPC_Assignment\Slaughterhouse\Client\service\AnimalLookUp.class
-dk\via\slaughterhouse\ProductId$1.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\service\deleteme.class
+dk\via\slaughterhouse\ProductId$1.class
 dk\via\slaughterhouse\ProductsData$Builder.class
-dk\via\slaughterhouse\AnimalLookUpServiceGrpc$AnimalLookUpServiceDescriptorSupplier.class
 dk\via\slaughterhouse\AnimalPartId$Builder.class
+dk\via\slaughterhouse\AnimalLookUpServiceGrpc$AnimalLookUpServiceDescriptorSupplier.class
 dk\via\slaughterhouse\AnimalDataOrBuilder.class
 dk\via\slaughterhouse\AnimalData$1.class
 dk\via\slaughterhouse\ProductsData$1.class
@@ -23,16 +23,16 @@ dk\via\slaughterhouse\AnimalPartData.class
 dk\via\slaughterhouse\Slaughterhouse.class
 dk\via\slaughterhouse\AnimalPartData$1.class
 dk\via\slaughterhouse\EmptyMessage$Builder.class
-dk\via\slaughterhouse\AnimalsDataOrBuilder.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\service\animalLookUp\AnimalLookUpServiceImpl.class
-dk\via\slaughterhouse\AnimalPartsData.class
+dk\via\slaughterhouse\AnimalsDataOrBuilder.class
 dk\via\slaughterhouse\AnimalRegistrationServiceGrpc.class
+dk\via\slaughterhouse\AnimalPartsData.class
 dk\via\slaughterhouse\PartTypeData$Builder.class
 dk\via\slaughterhouse\AnimalsData$Builder.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\service\animalRegistration\AnimalRegistrationServiceImpl.class
 dk\via\slaughterhouse\AnimalData$Builder.class
-dk\via\slaughterhouse\AnimalLookUpServiceGrpc$MethodHandlers.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\DAO\Tray\TrayDAOImpl.class
+dk\via\slaughterhouse\AnimalLookUpServiceGrpc$MethodHandlers.class
 dk\via\slaughterhouse\AnimalId.class
 dk\via\slaughterhouse\AnimalLookUpServiceGrpc$AnimalLookUpServiceFutureStub.class
 dk\via\slaughterhouse\AnimalData.class
@@ -50,8 +50,8 @@ PRO3_gRPC_Assignment\Slaughterhouse\Client\service\AnimalRegistration.class
 dk\via\slaughterhouse\PartTypeIdOrBuilder.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\gRPC\GRPCAnimalRegistration.class
 dk\via\slaughterhouse\AnimalId$Builder.class
-dk\via\slaughterhouse\PartTypeData$1.class
 dk\via\slaughterhouse\ProductData$Builder.class
+dk\via\slaughterhouse\PartTypeData$1.class
 PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\dataConverters\ProductConverter.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\DAO\Animal\AnimalDAO.class
 dk\via\slaughterhouse\AnimalPartsData$Builder.class
@@ -63,8 +63,8 @@ dk\via\slaughterhouse\AnimalPartsDataOrBuilder.class
 dk\via\slaughterhouse\AnimalsData.class
 PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\dataConverters\AnimalPartConverter.class
 dk\via\slaughterhouse\AnimalPartDataOrBuilder.class
-dk\via\slaughterhouse\AnimalLookUpServiceGrpc$AnimalLookUpServiceBlockingStub.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\DAO\Product\ProductDAO.class
+dk\via\slaughterhouse\AnimalLookUpServiceGrpc$AnimalLookUpServiceBlockingStub.class
 dk\via\slaughterhouse\AnimalIdOrBuilder.class
 dk\via\slaughterhouse\ProductsDataOrBuilder.class
 dk\via\slaughterhouse\AnimalRegistrationServiceGrpc$AnimalRegistrationServiceBlockingStub.class
@@ -83,7 +83,6 @@ dk\via\slaughterhouse\AnimalPartsData$1.class
 dk\via\slaughterhouse\AnimalRegistrationServiceGrpc$AnimalRegistrationServiceImplBase.class
 dk\via\slaughterhouse\AnimalPartId.class
 PRO3_gRPC_Assignment\Slaughterhouse\Client\interfaces\IAnimalLookUp.class
-PRO3_gRPC_Assignment\Pro3GRpcAssignmentApplication.class
 dk\via\slaughterhouse\TrayData$Builder.class
 dk\via\slaughterhouse\AnimalsData$1.class
 PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\PartType.class
@@ -95,5 +94,5 @@ dk\via\slaughterhouse\PartTypeId.class
 dk\via\slaughterhouse\EmptyMessage.class
 dk\via\slaughterhouse\AnimalLookUpServiceGrpc$AnimalLookUpServiceStub.class
 PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\dataConverters\TrayConverter.class
-PRO3_gRPC_Assignment\Slaughterhouse\Server\DAO\Animal\AnimalDAOImpl.class
 PRO3_gRPC_Assignment\Slaughterhouse\Server\DAO\AnimalPart\AnimalPartDAO.class
+PRO3_gRPC_Assignment\Slaughterhouse\Server\DAO\Animal\AnimalDAOImpl.class

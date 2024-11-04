@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Pro3GRpcAssignmentApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/service/deleteme.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -199,26 +200,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Pro3GRpcAssignmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="PRO3_gRPC_Assignment" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="PRO3_gRPC_Assignment.Pro3GRpcAssignmentApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.AnimalLookUpTest.testGetAnimalsFromProductId" />
       <item itemvalue="JUnit.AnimalLookUpTest" />
       <item itemvalue="JUnit.AnimalRegistrationTest" />
       <item itemvalue="JUnit.AnimalRegistrationTest.registerNewAnimal" />
-      <item itemvalue="Spring Boot.Pro3GRpcAssignmentApplication" />
       <item itemvalue="Spring Boot.GRPCServer" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.GRPCServer" />
-        <item itemvalue="JUnit.AnimalRegistrationTest" />
         <item itemvalue="JUnit.AnimalLookUpTest" />
+        <item itemvalue="JUnit.AnimalRegistrationTest" />
         <item itemvalue="JUnit.AnimalRegistrationTest.registerNewAnimal" />
         <item itemvalue="JUnit.AnimalLookUpTest.testGetAnimalsFromProductId" />
       </list>
@@ -227,8 +220,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -245,6 +238,11 @@
       <workItem from="1727940857676" duration="2494000" />
       <workItem from="1727953686542" duration="1534000" />
       <workItem from="1728586838291" duration="6620000" />
+      <workItem from="1729663249007" duration="9000" />
+      <workItem from="1729679774931" duration="34000" />
+      <workItem from="1729681960636" duration="820000" />
+      <workItem from="1730700862436" duration="70000" />
+      <workItem from="1730700960906" duration="9231000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />

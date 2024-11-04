@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +61,32 @@ import java.util.List;
         )
     );
 
+    return new ArrayList<>(animals);
+  }
+
+  @Override public ArrayList<Animal> findAllByDate(LocalDate date)
+      throws SQLException
+  {
+    String sql = "SELECT * FROM Animal WHERE arrival_date = ?";
+    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{date},
+        (rs, rowNum) -> new Animal(
+            rs.getString("animal_id"),
+            rs.getDouble("weight_kilogram")
+        )
+    );
+    return new ArrayList<>(animals);
+  }
+
+  @Override public ArrayList<Animal> findAllByOrigin(String origin)
+      throws SQLException
+  {
+    String sql = "SELECT * FROM Animal WHERE origin = ?";
+    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{origin},
+        (rs, rowNum) -> new Animal(
+            rs.getString("animal_id"),
+            rs.getDouble("weight_kilogram")
+        )
+    );
     return new ArrayList<>(animals);
   }
 }

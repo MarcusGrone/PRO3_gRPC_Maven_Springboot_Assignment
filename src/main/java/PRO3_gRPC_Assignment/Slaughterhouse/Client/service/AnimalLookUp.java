@@ -20,7 +20,7 @@ public class AnimalLookUp extends Client implements IAnimalLookUp {
 
     @Override
     public List<Animal> getAnimalsFromProductId(String productId) {
-        ManagedChannel channel = channel();
+        ManagedChannel channel = createGrpcChannel();
 
         try {
             AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(channel);
@@ -38,7 +38,7 @@ public class AnimalLookUp extends Client implements IAnimalLookUp {
 
     @Override
     public List<Product> getProductsFromAnimalId(String animalId) {
-        ManagedChannel channel = channel();
+        ManagedChannel channel = createGrpcChannel();
 
         try {
             AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(channel);

@@ -7,14 +7,19 @@ import java.net.http.HttpClient;
 public class Client {
   protected final String host;
   protected final int grpcPort;
-  protected final int restPort;
-  protected final HttpClient httpClient;
+  protected int restPort;
+  protected HttpClient httpClient;
 
   public Client(String host, int grpcPort, int restPort) {
     this.host = host;
     this.grpcPort = grpcPort;
     this.restPort = restPort;
     this.httpClient = HttpClient.newHttpClient(); // REST client
+  }
+
+  public Client(String host, int grpcPort) {
+    this.host = host;
+    this.grpcPort = grpcPort;
   }
 
   public ManagedChannel createGrpcChannel() {

@@ -20,7 +20,7 @@ public class AnimalRegistration extends Client implements IAnimalRegistration
 
   @Override public Animal registerNewAnimal(double weightInKg)
   {
-    ManagedChannel channel = channel();
+    ManagedChannel channel = createGrpcChannel();
 
     try
     {

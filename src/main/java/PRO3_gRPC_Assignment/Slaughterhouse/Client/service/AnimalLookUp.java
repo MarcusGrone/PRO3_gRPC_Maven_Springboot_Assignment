@@ -12,44 +12,59 @@ import io.grpc.ManagedChannel;
 
 import java.util.List;
 
-public class AnimalLookUp extends Client implements IAnimalLookUp {
-    public AnimalLookUp(String host, int port) {
-        super(host, port);
+public class AnimalLookUp extends Client implements IAnimalLookUp
+{
+  public AnimalLookUp(String host, int port)
+  {
+    super(host, port);
+  }
+
+  @Override public List<Animal> getAnimalsFromProductId(String productId)
+  {
+    ManagedChannel channel = channel();
+
+    try
+    {
+      AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(
+          channel);
+
+      AnimalsData animalsData = stub.getAnimalsFromProductId(
+          ProductConverter.convertTogRPCProductId(productId));
+
+      return AnimalConverter.convertToAnimalList(animalsData);
+    }
+    catch (Exception e)
+    {
+      throw new RuntimeException(e);
+    }
+    finally
+    {
+      channel.shutdown();
     }
 
+  }
 
-    @Override
-    public List<Animal> getAnimalsFromProductId(String productId) {
-        ManagedChannel channel = channel();
+  @Override public List<Product> getProductsFromAnimalId(String animalId)
+  {
+    ManagedChannel channel = channel();
 
-        try {
-            AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(channel);
+    try
+    {
+      AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(
+          channel);
 
-            AnimalsData animalsData = stub.getAnimalsFromProductId(ProductConverter.convertTogRPCProductId(productId));
+      ProductsData productsData = stub.getProductFromAnimalId(
+          AnimalConverter.convertToGrpcAnimalId(animalId));
 
-            return AnimalConverter.convertToAnimalList(animalsData);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        } finally {
-            channel.shutdown();
-        }
-
+      return ProductConverter.convertToProductList(productsData);
     }
-
-    @Override
-    public List<Product> getProductsFromAnimalId(String animalId) {
-        ManagedChannel channel = channel();
-
-        try {
-            AnimalLookUpServiceGrpc.AnimalLookUpServiceBlockingStub stub = AnimalLookUpServiceGrpc.newBlockingStub(channel);
-
-            ProductsData productsData = stub.getProductFromAnimalId(AnimalConverter.convertToGrpcAnimalId(animalId));
-
-            return ProductConverter.convertToProductList(productsData);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        } finally {
-            channel.shutdown();
-        }
+    catch (Exception e)
+    {
+      throw new RuntimeException(e);
     }
+    finally
+    {
+      channel.shutdown();
+    }
+  }
 }

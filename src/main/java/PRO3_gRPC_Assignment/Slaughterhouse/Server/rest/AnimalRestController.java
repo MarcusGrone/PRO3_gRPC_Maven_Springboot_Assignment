@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/animal")
 public class AnimalRestController
 {
   private final AnimalService animalService;

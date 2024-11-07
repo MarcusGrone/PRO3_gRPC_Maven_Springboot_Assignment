@@ -1,7 +1,9 @@
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\CLI\ClientCLI.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\interfaces\IAnimalLookUp.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\interfaces\IAnimalRegistration.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\service\AnimalLookUp.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\service\AnimalRegistration.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\service\AnimalRestService.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Client\service\Client.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\Animal.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Entities_Shared\AnimalPart.java
@@ -23,6 +25,9 @@ G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\gRPC\GRPCAnimalLookUp.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\gRPC\GRPCAnimalRegistration.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\GRPCServer.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\rest\AnimalRestController.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\rest\AnimalService.java
+G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\rest\AnimalServiceImpl.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\service\animalLookUp\AnimalLookUpServiceImpl.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\service\animalLookUp\IAnimalLookUpService.java
 G:\My Drive\Softwareingeniør - VIA\3. Semester\PRO3\Course Assignment\src\main\java\PRO3_gRPC_Assignment\Slaughterhouse\Server\service\animalRegistration\AnimalRegistrationServiceImpl.java

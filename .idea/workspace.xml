@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Added dependency to pom file for JBDC to work again. Removed the auto-generated application class">
+    <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Fixed Grpc clients so they work again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Client/service/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -243,7 +247,7 @@
       <workItem from="1727940857676" duration="2494000" />
       <workItem from="1727953686542" duration="1534000" />
       <workItem from="1728586838291" duration="6620000" />
-      <workItem from="1730964205413" duration="357000" />
+      <workItem from="1730964205413" duration="3790000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -341,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728373982783</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed Grpc clients so they work again">
+      <option name="closed" value="true" />
+      <created>1730964916620</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730964916620</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +370,8 @@
     <MESSAGE value="Removed cache from AnimalRegistrationServiceImpl.java" />
     <MESSAGE value="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server" />
     <MESSAGE value="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer" />
+    <MESSAGE value="Fixed Grpc clients so they work again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Grpc clients so they work again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

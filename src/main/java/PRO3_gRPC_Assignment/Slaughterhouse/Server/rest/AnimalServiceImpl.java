@@ -5,6 +5,7 @@ import PRO3_gRPC_Assignment.Slaughterhouse.Server.DAO.Animal.AnimalDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -47,11 +48,25 @@ public class AnimalServiceImpl implements AnimalService
 
   @Override
   public List<Animal> getAnimalsByDate(LocalDate date) {
-    throw new UnsupportedOperationException("Filtering by date not implemented yet");
+    try
+    {
+      return animalDAO.findAllByDate(date);
+    }
+    catch (SQLException e)
+    {
+      throw new RuntimeException(e);
+    }
   }
 
   @Override
   public List<Animal> getAnimalsByOrigin(String origin) {
-    throw new UnsupportedOperationException("Filtering by origin not implemented yet");
+    try
+    {
+      return animalDAO.findAllByOrigin(origin);
+    }
+    catch (SQLException e)
+    {
+      throw new RuntimeException(e);
+    }
   }
 }

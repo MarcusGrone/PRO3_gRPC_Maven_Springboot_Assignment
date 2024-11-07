@@ -8,14 +8,16 @@ CREATE TABLE Animal
 (
     animal_id       SERIAL UNIQUE,
     weight_kilogram DECIMAL(10, 5),
+    origin          VARCHAR(255),
+    arrival_date    DATE,
     PRIMARY KEY (animal_id)
 );
 
 
 CREATE TABLE PartType
 (
-    type_id         SERIAL UNIQUE,
-    "desc"          VARCHAR(200),
+    type_id SERIAL UNIQUE,
+    "desc"  VARCHAR(200),
     PRIMARY KEY (type_id)
 );
 

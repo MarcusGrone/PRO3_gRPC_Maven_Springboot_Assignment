@@ -28,10 +28,11 @@ public class AnimalRestController
     return new ResponseEntity<>(savedAnimal, HttpStatus.CREATED);
   }
 
-  @GetMapping
+
+  @GetMapping({"/date/{date}", "/origin/{origin}"})
   public ResponseEntity<List<Animal>> getAnimalsByDateOrOrigin(
-      @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
-      @RequestParam(required = false) String origin) {
+      @PathVariable(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
+      @PathVariable(required = false) String origin) {
 
     List<Animal> animals;
     if (date != null) {

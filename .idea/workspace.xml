@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Fixed Grpc clients so they work again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Entities_Shared/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/DDL_slaughterhouseschema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/DDL_slaughterhouseschema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +227,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -248,6 +246,7 @@
       <workItem from="1727953686542" duration="1534000" />
       <workItem from="1728586838291" duration="6620000" />
       <workItem from="1730964205413" duration="3790000" />
+      <workItem from="1730987126990" duration="4838000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />

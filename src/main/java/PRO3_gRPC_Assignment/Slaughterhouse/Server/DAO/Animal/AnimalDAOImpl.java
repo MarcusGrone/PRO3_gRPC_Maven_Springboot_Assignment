@@ -23,8 +23,9 @@ import java.util.List;
 
   @Override public Animal create(Animal animal) throws SQLException
   {
-    String sql = "INSERT INTO animal (weight_kilogram) VALUES (?)";
-    jdbcTemplate.update(sql, BigDecimal.valueOf(animal.getWeight()));
+    String sql = "INSERT INTO animal (weight_kilogram, origin, arrival_date) VALUES (?, ?, ?)";
+    jdbcTemplate.update(sql, BigDecimal.valueOf(animal.getWeight()),
+        animal.getOrigin(), animal.getDate());
     return animal;
   }
 
@@ -45,21 +46,20 @@ import java.util.List;
     return new ArrayList<>(animals);
   }
 
-  @Override
-  public ArrayList<Animal> getAnimalsFromProduct(String productId) throws SQLException {
-    String sql = "SELECT DISTINCT a.animal_id, a.weight_kilogram " +
-        "FROM Animal a " +
-        "JOIN AnimalPart ap ON a.animal_id = ap.animal_id " +
-        "JOIN Product p ON ap.part_id = p.part_id " +
-        "JOIN Tray t ON p.product_id = t.product_id " +
-        "WHERE p.product_id = ?";
+  @Override public ArrayList<Animal> getAnimalsFromProduct(String productId)
+      throws SQLException
+  {
+    String sql =
+        "SELECT DISTINCT a.animal_id, a.weight_kilogram " + "FROM Animal a "
+            + "JOIN AnimalPart ap ON a.animal_id = ap.animal_id "
+            + "JOIN Product p ON ap.part_id = p.part_id "
+            + "JOIN Tray t ON p.product_id = t.product_id "
+            + "WHERE p.product_id = ?";
 
-    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{Integer.valueOf(productId)},
-        (rs, rowNum) -> new Animal(
-            String.valueOf(rs.getInt("animal_id")),
-            rs.getDouble("weight_kilogram")
-        )
-    );
+    List<Animal> animals = jdbcTemplate.query(sql,
+        new Object[] {Integer.valueOf(productId)},
+        (rs, rowNum) -> new Animal(String.valueOf(rs.getInt("animal_id")),
+            rs.getDouble("weight_kilogram")));
 
     return new ArrayList<>(animals);
   }
@@ -68,12 +68,11 @@ import java.util.List;
       throws SQLException
   {
     String sql = "SELECT * FROM Animal WHERE arrival_date = ?";
-    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{date},
-        (rs, rowNum) -> new Animal(
-            rs.getString("animal_id"),
-            rs.getDouble("weight_kilogram")
-        )
-    );
+    List<Animal> animals = jdbcTemplate.query(sql, new Object[] {date},
+        (rs, rowNum) -> new Animal(rs.getString("animal_id"),
+            rs.getDouble("weight_kilogram"),
+            rs.getDate("arrival_date").toLocalDate(), rs.getString("origin")));
+
     return new ArrayList<>(animals);
   }
 
@@ -81,12 +80,10 @@ import java.util.List;
       throws SQLException
   {
     String sql = "SELECT * FROM Animal WHERE origin = ?";
-    List<Animal> animals = jdbcTemplate.query(sql, new Object[]{origin},
-        (rs, rowNum) -> new Animal(
-            rs.getString("animal_id"),
-            rs.getDouble("weight_kilogram")
-        )
-    );
+    List<Animal> animals = jdbcTemplate.query(sql, new Object[] {origin},
+        (rs, rowNum) -> new Animal(rs.getString("animal_id"),
+            rs.getDouble("weight_kilogram"),
+            rs.getDate("arrival_date").toLocalDate(), rs.getString("origin")));
     return new ArrayList<>(animals);
   }
 }

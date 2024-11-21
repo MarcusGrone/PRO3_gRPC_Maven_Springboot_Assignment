@@ -10,23 +10,18 @@ import java.util.stream.Collectors;
 
 public class TrayConverter {
     public static TrayData convertToGrpcTrayData(Tray tray) {
-        List<AnimalPartData> animalPartDataList = tray.getParts().stream()
-                .map(AnimalPartConverter::convertToGrpcAnimalPartData)
-                .collect(Collectors.toList());
+
 
         return TrayData.newBuilder()
                 .setTrayId(tray.getTrayId())
-                .setPartType(tray.getPartType()) // Assuming you add a part type field in Tray
-                .addAllAnimalPartsData(animalPartDataList)
+                .setPartType(tray.getPartTypeId()) // Assuming you add a part type field in Tray
                 .build();
     }
 
     public static Tray convertToTray(TrayData trayData) {
-        List<AnimalPart> parts = trayData.getAnimalPartsDataList().stream()
-                .map(AnimalPartConverter::convertToAnimalPart)
-                .collect(Collectors.toList());
 
-        return new Tray(trayData.getTrayId(), trayData.getPartType(), parts, trayData.getMaxWeight());
+
+        return new Tray(trayData.getTrayId(), trayData.getPartType(), trayData.getMaxWeight());
     }
 
     public static List<Tray> convertToTrayList(List<TrayData> trayDataList) {

@@ -1,4 +1,4 @@
-package PRO3_gRPC_Assignment.Slaughterhouse.Server.rest;
+package PRO3_gRPC_Assignment.Slaughterhouse.Server.rest.Animal;
 
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.Animal;
 

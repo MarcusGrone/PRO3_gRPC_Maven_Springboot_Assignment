@@ -62,12 +62,12 @@ class AnimalLookUpTest {
     animalPartsForTray.add(new AnimalPart("2", "1", 3.0, "shoulder"));
 
     ArrayList<Tray> trays = new ArrayList<>();
-    trays.add(new Tray("1", "leg", animalPartsForTray, 2.0));  // Corrected instantiation
-    trays.add(new Tray("2", "shoulder", animalPartsForTray, 3.0));
+    trays.add(new Tray("1", "leg", 2.0));  // Corrected instantiation
+    trays.add(new Tray("2", "shoulder", 3.0));
 
     ArrayList<Product> expectedProducts = new ArrayList<>();
-    expectedProducts.add(new Product("1", animalPartsForTray, trays));
-    expectedProducts.add(new Product("2", animalPartsForTray , trays));
+    expectedProducts.add(new Product("1"));
+    expectedProducts.add(new Product("2"));
 
 
     when(productDAO.getAllProductsFromAnimal(animalId)).thenReturn(expectedProducts);

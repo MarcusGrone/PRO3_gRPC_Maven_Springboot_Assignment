@@ -17,7 +17,7 @@ CREATE TABLE Animal
 CREATE TABLE PartType
 (
     type_id SERIAL UNIQUE,
-    "desc"  VARCHAR(200),
+    name  VARCHAR(200),
     PRIMARY KEY (type_id)
 );
 
@@ -28,18 +28,20 @@ CREATE TABLE AnimalPart
     weight_kilogram DECIMAL(10, 5),
     animal_id       int,
     type_id         int,
+    product_id      int,
+    tray_id         int,
     PRIMARY KEY (part_id),
     FOREIGN KEY (animal_id) REFERENCES Animal (animal_id),
-    FOREIGN KEY (type_id) REFERENCES PartType (type_id)
+    FOREIGN KEY (type_id) REFERENCES PartType (type_id),
+    FOREIGN KEY (product_id) REFERENCES Product (product_id),
+    FOREIGN KEY (tray_id) REFERENCES Tray (tray_id)
 );
 
 
 CREATE TABLE Product
 (
     product_id SERIAL UNIQUE,
-    part_id    int,
-    PRIMARY KEY (product_id, part_id),
-    FOREIGN KEY (part_id) REFERENCES AnimalPart (part_id)
+    PRIMARY KEY (product_id)
 );
 
 
@@ -47,11 +49,11 @@ CREATE TABLE Product
 CREATE TABLE Tray
 (
     tray_id    SERIAL UNIQUE,
-    product_id int,
-    PRIMARY KEY (tray_id, product_id),
-    FOREIGN KEY (product_id) REFERENCES Product (product_id)
+    type_id    int,
+    maxWeight  DECIMAL(10,5),
+    PRIMARY KEY (tray_id),
+    FOREIGN KEY (type_id) REFERENCES PartType(type_id)
 );
-
 
 
 INSERT INTO Animal (weight_kilogram)
@@ -67,7 +69,7 @@ VALUES (500.25),
        (580.90);
 
 
-INSERT INTO PartType ("desc")
+INSERT INTO PartType (name)
 VALUES ('Shoulder'),
        ('Leg'),
        ('Rib'),
@@ -91,18 +93,3 @@ VALUES (50.25, 1, 1),
        (60.80, 6, 8),
        (20.60, 7, 9),
        (15.90, 8, 10);
-
-
-INSERT INTO Product (part_id)
-VALUES (1),
-       (2),
-       (3),
-       (4);
-
-
-
-INSERT INTO Tray (product_id)
-VALUES ((SELECT product_id FROM Product WHERE part_id = 1)),
-       ((SELECT product_id FROM Product WHERE part_id = 2)),
-       ((SELECT product_id FROM Product WHERE part_id = 3)),
-       ((SELECT product_id FROM Product WHERE part_id = 4));

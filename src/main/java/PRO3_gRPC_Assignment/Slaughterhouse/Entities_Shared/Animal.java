@@ -26,8 +26,7 @@ public class Animal
     this.origin = origin;
   }
 
-  public Animal() {
-  }
+  public Animal() {}
 
   public String getRegistrationId()
   {

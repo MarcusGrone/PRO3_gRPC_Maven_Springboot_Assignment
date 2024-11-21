@@ -14,7 +14,7 @@ public class AnimalPartConverter {
                 .setAnimalPartId(animalPart.getPartId())
                 .setAnimalId(animalPart.getAnimalId())
                 .setPartWeight(String.valueOf(animalPart.getWeight()))
-                .setPartTypeId(animalPart.getPartType())
+                .setPartTypeId(animalPart.getPartTypeId())
                 .build();
     }
 

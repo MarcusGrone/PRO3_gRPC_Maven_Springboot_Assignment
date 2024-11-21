@@ -12,5 +12,7 @@ public interface ProductDAO
   ArrayList<Product> getAllProducts() throws SQLException;
   ArrayList<Product> getAllProductsFromAnimal(String animalId)
       throws SQLException;
+  ArrayList<Product> getProductsContainingAnimal(String animalId) throws SQLException;
+
   Product getProductFromAnimalPartId(String animalPartId) throws SQLException;
 }

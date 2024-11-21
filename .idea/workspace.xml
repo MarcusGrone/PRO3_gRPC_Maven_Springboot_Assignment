@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="07b6bc72-0565-48da-a06e-074272f655fb" name="Changes" comment="Fixed Grpc clients so they work again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/DDL_slaughterhouseschema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/DDL_slaughterhouseschema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Animal/AnimalDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/rest/AnimalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PRO3_gRPC_Assignment/Slaughterhouse/Server/DAO/Product/ProductDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -54,52 +59,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.AnimalLookUpServiceImplTest.testGetProductsFromAnimalId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AnimalLookUpTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AnimalLookUpTest.getProductsFromAnimalId_ReturnsProductList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AnimalLookUpTest.testGetAnimalsFromProductId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AnimalRegistrationMockitoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AnimalRegistrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AnimalRegistrationTest.registerNewAnimal.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [mvn,clean,test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.PRO3_gRPC_Assignment [test].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.GRPCServer.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Pro3GRpcAssignmentApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AnimalLookUpServiceImplTest.testGetProductsFromAnimalId.executor": "Run",
+    "JUnit.AnimalLookUpTest.executor": "Run",
+    "JUnit.AnimalLookUpTest.getProductsFromAnimalId_ReturnsProductList.executor": "Run",
+    "JUnit.AnimalLookUpTest.testGetAnimalsFromProductId.executor": "Run",
+    "JUnit.AnimalRegistrationMockitoTest.executor": "Run",
+    "JUnit.AnimalRegistrationTest.executor": "Run",
+    "JUnit.AnimalRegistrationTest.registerNewAnimal.executor": "Debug",
+    "Maven.PRO3_gRPC_Assignment [clean,install].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [clean].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [compile].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [dependency:tree].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [install].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [mvn,clean,test].executor": "Run",
+    "Maven.PRO3_gRPC_Assignment [test].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.GRPCServer.executor": "Run",
+    "Spring Boot.Pro3GRpcAssignmentApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/My Drive/Softwareingeniør - VIA/3. Semester/PRO3/Course Assignment",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -227,8 +233,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -247,6 +253,7 @@
       <workItem from="1728586838291" duration="6620000" />
       <workItem from="1730964205413" duration="3790000" />
       <workItem from="1730987126990" duration="4838000" />
+      <workItem from="1732178878158" duration="4085000" />
     </task>
     <task id="LOCAL-00001" summary="First inital push.">
       <option name="closed" value="true" />
@@ -352,7 +359,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730964916620</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated dao interfaces.">
+      <option name="closed" value="true" />
+      <created>1732183163564</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732183163564</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated database.">
+      <option name="closed" value="true" />
+      <created>1732183694020</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732183694020</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,8 +392,10 @@
     <MESSAGE value="Removed cache from AnimalRegistrationServiceImpl.java" />
     <MESSAGE value="Updated protocol and all converters. Also implemented getProductsFromAnimalId and getAnimalsFromProductId all the way down to the Service-layer on the server" />
     <MESSAGE value="Updated protocol to have different services instead of 1 big, so that the services can be implemented in different classes. Updated gRPC dataentities names and updated 1 DAO class to convert id string to integer" />
+    <MESSAGE value="Updated dao interfaces." />
     <MESSAGE value="Fixed Grpc clients so they work again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Grpc clients so they work again" />
+    <MESSAGE value="Updated database." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated database." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

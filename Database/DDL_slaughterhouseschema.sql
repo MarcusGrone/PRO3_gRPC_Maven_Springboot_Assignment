@@ -22,20 +22,7 @@ CREATE TABLE PartType
 );
 
 
-CREATE TABLE AnimalPart
-(
-    part_id         SERIAL UNIQUE,
-    weight_kilogram DECIMAL(10, 5),
-    animal_id       int,
-    type_id         int,
-    product_id      int,
-    tray_id         int,
-    PRIMARY KEY (part_id),
-    FOREIGN KEY (animal_id) REFERENCES Animal (animal_id),
-    FOREIGN KEY (type_id) REFERENCES PartType (type_id),
-    FOREIGN KEY (product_id) REFERENCES Product (product_id),
-    FOREIGN KEY (tray_id) REFERENCES Tray (tray_id)
-);
+
 
 
 CREATE TABLE Product
@@ -53,6 +40,21 @@ CREATE TABLE Tray
     maxWeight  DECIMAL(10,5),
     PRIMARY KEY (tray_id),
     FOREIGN KEY (type_id) REFERENCES PartType(type_id)
+);
+
+CREATE TABLE AnimalPart
+(
+    part_id         SERIAL UNIQUE,
+    weight_kilogram DECIMAL(10, 5),
+    animal_id       int,
+    type_id         int,
+    product_id      int,
+    tray_id         int,
+    PRIMARY KEY (part_id),
+    FOREIGN KEY (animal_id) REFERENCES Animal (animal_id),
+    FOREIGN KEY (type_id) REFERENCES PartType (type_id),
+    FOREIGN KEY (product_id) REFERENCES Product (product_id),
+    FOREIGN KEY (tray_id) REFERENCES Tray (tray_id)
 );
 
 

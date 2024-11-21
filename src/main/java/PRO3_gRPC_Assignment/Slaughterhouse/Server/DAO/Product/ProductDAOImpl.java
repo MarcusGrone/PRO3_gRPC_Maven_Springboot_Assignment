@@ -51,4 +51,10 @@ import java.util.List;
 
     return new ArrayList<>(products);
   }
+
+  @Override public Product getProductFromAnimalPartId(String animalPartId)
+      throws SQLException
+  {
+    return null;
+  }
 }

@@ -12,7 +12,7 @@ GRANT USAGE ON SCHEMA pro3_slaughterhouse TO slaughterhouseserver;
 
 GRANT USAGE, UPDATE, SELECT ON SEQUENCE pro3_slaughterhouse.animal_animal_id_seq TO slaughterhouseserver;
 GRANT USAGE, UPDATE, SELECT ON SEQUENCE pro3_slaughterhouse.animalpart_part_id_seq TO slaughterhouseserver;
-GRANT USAGE, UPDATE, SELECT ON SEQUENCE pro3_slaughterhouse.parttype_id_seq TO slaughterhouseserver;
+GRANT USAGE, UPDATE, SELECT ON SEQUENCE pro3_slaughterhouse.parttype_type_id_seq TO slaughterhouseserver;
 GRANT USAGE, UPDATE, SELECT ON SEQUENCE pro3_slaughterhouse.product_product_id_seq TO slaughterhouseserver;
 GRANT USAGE, UPDATE, SELECT ON SEQUENCE pro3_slaughterhouse.tray_tray_id_seq TO slaughterhouseserver;
 

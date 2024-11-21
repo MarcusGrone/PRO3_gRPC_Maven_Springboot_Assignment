@@ -8,4 +8,5 @@ import java.util.ArrayList;
 public interface TrayDAO {
   Tray create(Tray tray) throws SQLException;
   ArrayList<Tray> getAllTrays() throws SQLException;
+  Tray getTrayFromAnimalPartId(String animalPartId) throws SQLException;
 }

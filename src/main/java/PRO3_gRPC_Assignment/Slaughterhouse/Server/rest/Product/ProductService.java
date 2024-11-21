@@ -2,8 +2,12 @@ package PRO3_gRPC_Assignment.Slaughterhouse.Server.rest.Product;
 
 import PRO3_gRPC_Assignment.Slaughterhouse.Entities_Shared.Product;
 
-public interface ProductService {
-    Product registerProduct(Product product);
+import java.util.List;
 
-    Product getProduct(String productId);
+public interface ProductService {
+    Product createProduct(Product product);
+
+    List<Product> getAllProducts();
+
+    List<Product> getProductsByAnimal(String animalId);
 }

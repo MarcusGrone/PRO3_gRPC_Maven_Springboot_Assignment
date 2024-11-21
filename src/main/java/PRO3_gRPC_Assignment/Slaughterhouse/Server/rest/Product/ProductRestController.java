@@ -12,7 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/product")
 public class ProductRestController {
-
     private final ProductService productService;
 
     @Autowired
@@ -21,21 +20,20 @@ public class ProductRestController {
     }
 
     @PostMapping
-    public ResponseEntity<Product> registerProduct(@RequestBody Product product) {
-        Product savedProduct = productService.registerProduct(product);
-        return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
+    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
+        Product createdProduct = productService.createProduct(product);
+        return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
     }
 
-    @GetMapping({"/{productId}"})
-    public ResponseEntity<Product> getAnimalsByDateOrOrigin(
-            @PathVariable String productId
-            )
-    {
-        Product retrievedProduct = productService.getProduct(productId);
-        if (retrievedProduct == null)
-        {
-            throw new NullPointerException();
-        }
-        return ResponseEntity.ok(retrievedProduct);
+    @GetMapping
+    public ResponseEntity<List<Product>> getAllProducts() {
+        List<Product> products = productService.getAllProducts();
+        return ResponseEntity.ok(products);
+    }
+
+    @GetMapping("/animal/{animalId}")
+    public ResponseEntity<List<Product>> getProductsByAnimal(@PathVariable String animalId) {
+        List<Product> products = productService.getProductsByAnimal(animalId);
+        return ResponseEntity.ok(products);
     }
 }

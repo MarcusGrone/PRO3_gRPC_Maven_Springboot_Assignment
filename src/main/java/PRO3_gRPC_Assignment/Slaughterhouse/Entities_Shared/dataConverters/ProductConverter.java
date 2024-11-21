@@ -10,31 +10,13 @@ import java.util.stream.Collectors;
 
 public class ProductConverter {
     public static ProductData convertToGrpcProductData(Product product) {
-        List<AnimalPartData> animalPartsData = product.getParts().stream()
-                .map(AnimalPartConverter::convertToGrpcAnimalPartData)
-                .collect(Collectors.toList());
-
-        List<TrayData> trayDataList = product.getTrays().stream()
-                .map(TrayConverter::convertToGrpcTrayData)
-                .collect(Collectors.toList());
-
         return ProductData.newBuilder()
                 .setProductId(product.getProductId())
-                .addAllAnimalPartsData(animalPartsData)
-                .addAllTraysData(trayDataList)
                 .build();
     }
 
     public static Product convertToProduct(ProductData productData) {
-        List<AnimalPart> animalParts = productData.getAnimalPartsDataList().stream()
-                .map(AnimalPartConverter::convertToAnimalPart)
-                .collect(Collectors.toList());
-
-        List<Tray> trays = productData.getTraysDataList().stream()
-                .map(TrayConverter::convertToTray)
-                .collect(Collectors.toList());
-
-        return new Product(productData.getProductId(), animalParts, trays);
+        return new Product(productData.getProductId());
     }
 
     public static List<Product> convertToProductList(ProductsData productsData) {

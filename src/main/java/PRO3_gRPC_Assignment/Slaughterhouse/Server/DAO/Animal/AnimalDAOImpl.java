@@ -46,7 +46,8 @@ public class AnimalDAOImpl implements AnimalDAO {
             JOIN AnimalPart ap ON a.registration_id = ap.animal_id
             WHERE ap.product_id = ?
         """;
-    List<Animal> animals = jdbcTemplate.query(sql, animalRowMapper(), productId);
+    int productIdInt = Integer.parseInt(productId); // Convert to Integer
+    List<Animal> animals = jdbcTemplate.query(sql, animalRowMapper(), productIdInt);
     return new ArrayList<>(animals);
   }
 

@@ -20,10 +20,13 @@ public class TrayDAOImpl implements TrayDAO {
   @Override
   public Tray create(Tray tray) throws SQLException {
     String sql = """
-            INSERT INTO Tray (type_id, maxWeight)
-            VALUES (?, ?) RETURNING tray_id
-        """;
-    String trayId = jdbcTemplate.queryForObject(sql, String.class, tray.getPartTypeId(), tray.getMaxWeight());
+                INSERT INTO Tray (type_id, maxWeight)
+                VALUES (?, ?) RETURNING tray_id
+            """;
+    String trayId = jdbcTemplate.queryForObject(sql, String.class,
+            Integer.parseInt(tray.getPartTypeId()), // Convert to Integer
+            tray.getMaxWeight()
+    );
     tray.setTrayId(trayId);
     return tray;
   }
@@ -38,18 +41,19 @@ public class TrayDAOImpl implements TrayDAO {
   @Override
   public Tray getTrayFromAnimalPartId(String animalPartId) throws SQLException {
     String sql = """
-            SELECT t.* FROM Tray t
-            JOIN AnimalPart ap ON t.tray_id = ap.tray_id
-            WHERE ap.part_id = ?
-        """;
-    return jdbcTemplate.queryForObject(sql, trayRowMapper(), animalPartId);
+                SELECT t.* FROM Tray t
+                JOIN AnimalPart ap ON t.tray_id = ap.tray_id
+                WHERE ap.part_id = ?
+            """;
+    int animalPartIdInt = Integer.parseInt(animalPartId); // Convert to Integer
+    return jdbcTemplate.queryForObject(sql, trayRowMapper(), animalPartIdInt);
   }
 
   private RowMapper<Tray> trayRowMapper() {
     return (rs, rowNum) -> new Tray(
-        rs.getString("tray_id"),
-        rs.getString("type_id"),
-        rs.getDouble("maxWeight")
+            rs.getString("tray_id"),
+            rs.getString("type_id"),
+            rs.getDouble("maxWeight")
     );
   }
 }

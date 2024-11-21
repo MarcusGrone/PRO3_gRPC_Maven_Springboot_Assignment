@@ -35,38 +35,41 @@ public class ProductDAOImpl implements ProductDAO {
   @Override
   public ArrayList<Product> getAllProductsFromAnimal(String animalId) throws SQLException {
     String sql = """
-            SELECT DISTINCT p.* FROM Product p
-            JOIN AnimalPart ap ON p.product_id = ap.product_id
-            WHERE ap.animal_id = ?
-        """;
-    List<Product> products = jdbcTemplate.query(sql, productRowMapper(), animalId);
+                SELECT DISTINCT p.* FROM Product p
+                JOIN AnimalPart ap ON p.product_id = ap.product_id
+                WHERE ap.animal_id = ?
+            """;
+    int animalIdInt = Integer.parseInt(animalId); // Convert to Integer
+    List<Product> products = jdbcTemplate.query(sql, productRowMapper(), animalIdInt);
     return new ArrayList<>(products);
   }
 
   @Override
   public ArrayList<Product> getProductsContainingAnimal(String animalId) throws SQLException {
     String sql = """
-            SELECT DISTINCT p.* FROM Product p
-            JOIN AnimalPart ap ON p.product_id = ap.product_id
-            WHERE ap.animal_id = ?
-        """;
-    List<Product> products = jdbcTemplate.query(sql, productRowMapper(), animalId);
+                SELECT DISTINCT p.* FROM Product p
+                JOIN AnimalPart ap ON p.product_id = ap.product_id
+                WHERE ap.animal_id = ?
+            """;
+    int animalIdInt = Integer.parseInt(animalId); // Convert to Integer
+    List<Product> products = jdbcTemplate.query(sql, productRowMapper(), animalIdInt);
     return new ArrayList<>(products);
   }
 
   @Override
   public Product getProductFromAnimalPartId(String animalPartId) throws SQLException {
     String sql = """
-            SELECT p.* FROM Product p
-            JOIN AnimalPart ap ON p.product_id = ap.product_id
-            WHERE ap.part_id = ?
-        """;
-    return jdbcTemplate.queryForObject(sql, productRowMapper(), animalPartId);
+                SELECT p.* FROM Product p
+                JOIN AnimalPart ap ON p.product_id = ap.product_id
+                WHERE ap.part_id = ?
+            """;
+    int animalPartIdInt = Integer.parseInt(animalPartId); // Convert to Integer
+    return jdbcTemplate.queryForObject(sql, productRowMapper(), animalPartIdInt);
   }
 
   private RowMapper<Product> productRowMapper() {
     return (rs, rowNum) -> new Product(
-        rs.getString("product_id")
+            rs.getString("product_id")
     );
   }
 }
